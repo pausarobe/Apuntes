@@ -146,7 +146,8 @@ $ rm -rf workspace* -> borra totes amb el mateix nom i un sufix
 
 ### Emphazises
 
-_italico_
+_italico_ 
+
 **Negrita**
 
 ### Links
@@ -272,33 +273,39 @@ $ git diff HEAD -> mira les diferencies
 $ git diff --staged
 ```
 
-Delete
-```bash
-$ git reset octofamily/octodog.txt -> per borrar
-```
-
 Back
 ```bash
 $ git checkout -- octocat.txt -> torna al ultim commit que tinguem
 ```
 
+Delete
+```bash
+$ git reset octofamily/octodog.txt -> per sortir del checkout on estava
+```
+
 New branch
 ```bash
-$ git branch clean_up -> crea una branca nova
+$ git branch <name_branch> -> crea una branca nova
 ```
 
 Merge
 ```bash
-$ git merge clean_up -> fusiona les dos branques
+$ git merge <name_branch> -> fusiona les dos branques, la que estas amb la < >
 ```
 
 Delete branch
 ```bash
-git branch -d clean_up -> borra la branca
+git branch -d <name_branch> -> borra la branca
 ```
 
 Remote
 ```bash
 $ git remote add origin https://github.com/try-git/try_git.git
 ```
+ 
+ 
+ 
+ 
+# JavaScript
 
+  
