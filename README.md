@@ -1,17 +1,38 @@
 ![SkyLab Coders](http://www.skylabcoders.com/images/403/default.png "SkyLabCoders")
 
-SkyLab Bootcamp 2017-Sep
-========================
+INDEX
+====
+1. [Basic Tools](file:///C:/users/pausar~1/appdata/local/temp/19.html#1basic-tools)
 
-# Basic Tools
+    1.1 [Console](file:///C:/users/pausar~1/appdata/local/temp/19.html#11console)
+    1.2 [Markdown](file:///C:/users/pausar~1/appdata/local/temp/19.html#12markdown)
 
-## Console
+2. [Git](file:///C:/users/pausar~1/appdata/local/temp/19.html#2git)
+    2.1 [References](file:///C:/users/pausar~1/appdata/local/temp/19.html#21references)
+
+3. [JavaScript](file:///C:/users/pausar~1/appdata/local/temp/19.html#3javascript)
+    3.1 [Arrays](file:///C:/users/pausar~1/appdata/local/temp/19.html#31arrays)
+    3.2 [Polyfill](file:///C:/users/pausar~1/appdata/local/temp/19.html#32polyfill)
+    3.3 [Hoisting](file:///C:/users/pausar~1/appdata/local/temp/19.html#33hoisting)
+    3.4 [Call vs Apply](file:///C:/users/pausar~1/appdata/local/temp/19.html#34call-vs-apply)
+    3.5 [Prototyping](file:///C:/users/pausar~1/appdata/local/temp/19.html#35prototyping)
+    3.6 [Var vs Scope and Block](file:///C:/users/pausar~1/appdata/local/temp/19.html#36var-vs-scope-and-block)
+
+4. [Jasmine](file:///C:/users/pausar~1/appdata/local/temp/19.html#4jasmine)
+
+
+# 1.Basic Tools
+
+## 1.1.Console 
 
 Emulators: 
 
 [Comander](http://cmder.net/)
+[Cygwin](http://cygwin.com)
 
-### Useful commands
+---
+
+#### 1.1.1.Useful commands
 
 How to see path to working directory
 
@@ -140,31 +161,45 @@ Borrar varies carpetes amb un sol comando
 ```bash
 $ rm -rf workspace* -> borra totes amb el mateix nom i un sufix
 ```
+  
+  
+---
+
+---
+    
 
 
-## Markdown
+## 1.2.Markdown
 
-### Emphazises
+---
 
-_italico_ 
+#### 1.2.1.Emphazises
+
+_italico_  
 
 **Negrita**
 
-### Links
+---
+
+#### 1.2.2.Links
 
 [Google](http://www.google.com "Goolge!")
 
 URI identificador
 URL localizador
 
-### Referencies 
+---
+
+#### 1.2.3.Referencies 
 
 This is [an example][id] reference-style link.
 This is [an example][id] reference-style link.
 
 [id]: http://example.com/  "Optional Title Here"
 
-### Tables
+---
+
+#### 1.2.4.Tables
 
 <table>
     <tr>
@@ -172,15 +207,15 @@ This is [an example][id] reference-style link.
     </tr>
 </table>
 
-### Code block
+---
+
+#### 1.2.5.Code block
 
 <code>This is a code block.</code>
 
-### Lists
+---
 
-1.  Bird
-2.  McHale
-3.  Parish
+#### 1.2.6.Lists
 
 * One
 * Two
@@ -190,21 +225,30 @@ This is [an example][id] reference-style link.
 - B
 - C
 
-unordened list
 <ul>
     <li>a</li>
     <li>b</li>
     <li>c</li>
 </ul>
 
-ordened list
+1.  Bird
+1.  McHale
+3.  Parish
+
 <ol>
     <li>a</li>
     <li>b</li>
     <li>c</li>
 </ol>
 
-### Blockquotes
+
+a. 1
+b. 2
+c. 3
+
+---
+
+#### 1.2.7.Blockquotes
 
 > This is the first level of quoting.
 >
@@ -212,15 +256,23 @@ ordened list
 >
 > Back to the first level.
 
-### Comments
+---
 
+#### 1.2.8.Comments
+
+```html
 <!-- this is a comment -->
+```
+  
+---
+  
+---
+    
 
 
+# 2.Git
 
-# Git
-
-Init a bare repo ("remote")
+Init a bare repo ("remote", "master")
 ```bash
 $ git init --bare
 ```
@@ -267,6 +319,11 @@ $ git pull origin master -> baixar, el origin masteres per marcar el cami la pri
 $ git pull
 ```
 
+See repo configuration
+```bash
+$ git config --list
+```
+
 Show differences from 
 ```bash
 $ git diff HEAD -> mira les diferencies
@@ -303,9 +360,301 @@ Remote
 $ git remote add origin https://github.com/try-git/try_git.git
 ```
  
- 
- 
- 
-# JavaScript
+See remotes
+```bash
+$ git remote -v
+```
 
-  
+Add remote
+```bash
+$ git remote add upstream <remote url>
+```
+
+Bring changes from remote to local repo
+```bash
+$ git fetch upstream -> semblant al pull, el pull baixa i aplica / el fetch nomes baixa
+```
+
+Merge changes from upstream/master to local master (master means branch "master")
+```bash
+$ git merge upstream/master
+```
+
+---
+
+## 2.1.References
+
+[Git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
+
+[Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
+
+[Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
+
+---
+
+---
+    
+
+
+# 3.JavaScript
+
+---
+
+## 3.1.Arrays
+
+![from f to a boom!](images/from-f-to-a-boom.jpg)
+
+```javascript
+function f1() { console.log(1) }
+function f2() { console.log(2) }
+function f3() { console.log(3) }
+
+var a = [f1, f2, f3];
+
+a.f1(); // err!
+
+a[0].f1(); // err!
+
+a[0](); // correct!
+
+var b = [a];
+
+b.length;
+
+b[0][1](); // f2 in a from b
+
+var c = [{ d: b }];
+
+c.d[0][2](); // f3 in a from c --> but error!
+
+c[0].d[0][2](); // good!
+
+var f = { g: { h: c } };
+
+f.g.h[0].d[0][0](); // f1 in a from f
+```
+
+---
+
+#### 3.1.1.Array.prototype.reduce()
+
+```javascript
+var cart = [{ item: 'camiseta', price: 10.5 },
+            { item: 'jeans', price: 23.95 },
+            { item: 'zapatos', price: 45 }];
+
+
+cart.reduce(function(accum, v) {
+   console.log(accum, v)
+   return accum + v.price;
+}, cart[0].price); // 89.95 wrong!!!! error!!! this store is stealing my money!!! (richy's store)
+
+cart.reduce(function(accum, v) {
+   console.log(accum, v)
+   return accum + v.price;
+}, 0); // 79.45 correct!!!  
+```
+
+---
+
+## 3.2.Polyfill
+
+```javascript
+Array.prototype.clone = function() { // provides a new function to arrays
+    return this.slice(0); // creates a copy of the array
+};
+```
+
+---
+
+## 3.3.Hoisting
+
+```javascript
+function fun() {
+    x = 1;
+    console.log(x);
+    var x;
+}
+
+fun(); // prints 1 and x only exists inside fun (despite being declared at the end)
+console.log(x); // raises an error, as x is not in a global context.
+```
+
+```javascript
+function fun() {
+    print();
+
+    function print() {
+        console.log('hello world');
+    }
+}
+
+fun(); // prints 'hello world' as print is declared and inside fun
+```
+
+---
+
+## 3.4.call vs apply
+
+```javascript
+function salute(name, name2) {
+    console.log(this.hello + ' ' + name + ', ' + name2);
+}
+
+var english = {
+    hello: 'hello'
+};
+
+var german = {
+    hello: 'hallo'
+};
+
+var catalan = {
+    hello: 'hola'
+};
+
+var italian = {
+    hello: 'ciao'
+};
+
+salute.call(english, 'ana', 'max');
+salute.apply(german, ['ana', 'max']);
+salute.call(catalan, 'ana', 'max');
+salute.apply(italian, ['ana', 'max']);
+```
+
+---
+
+## 3.5.Prototyping
+
+```javascript
+
+// Animal
+
+function Animal(species, name) {
+    this.species = species;
+    this.name = name;
+}
+
+Animal.prototype.eat = function() {
+    console.log(this.name + ' eating');
+};
+
+Animal.prototype.sleep = function() {
+    console.log(this.name + ' sleeping');
+};
+
+// Lion
+
+function Lion(name) {
+    Animal.call(this, 'feline', name);
+}
+
+Lion.prototype = new Animal();
+
+Lion.prototype.roar = function() {
+    console.log(this.name + ' roaring');
+};
+
+// Human
+
+function Human(name) {
+    Animal.call(this, 'human', name);
+}
+
+Human.prototype = new Animal();
+
+Human.prototype.speak = function() {
+    console.log(this.name + ' speaking');
+};
+
+// examples
+
+var max = new Human('max');
+max.eat();
+max.sleep();
+max.speak();
+
+var cecil = new Lion('cecil');
+cecil.eat();
+cecil.sleep();
+cecil.roar();
+```
+
+---
+
+## 3.6.var vs scope and block
+
+```javascript
+function fun() {
+    for (var i = 0; i < 10; i++) {
+        console.log(i);
+    }
+
+    console.log('here! ' + i); // WARN! i exists here! ... 10!
+}
+
+fun();
+```
+
+---
+
+---
+    
+
+
+# 4.Jasmine
+
+[Introduction](https://jasmine.github.io/2.0/introduction.html)
+
+---
+
+---
+
+# 5.HTML5
+
+```html
+<div> para bloques.</div>
+<span> para elementos en linea.</span>
+
+<address></address>
+
+<HTML> First tag in a document (unpaired).
+<HEAD> Marks the head section (paired).
+<BODY> Marks the body section (paired).
+<TITLE> Title (goes in head section) (paired).
+<P> Paragraph break (unpaired).
+<BR> Line break (unpaired).
+<HR> Horizontal rule (line) (unpaired).
+<PRE> Preformatted text (paired).
+<EM> Emphasis (usually italics) (paired).
+<STRONG> Stronger emphasis (paired).
+<B> Bold (text attribute) (paired).
+<I> Italics (text attribute) (paired).
+<H1> Level 1 (e.g., document) heading (paired).
+<H2> Level 2 (e.g., part) heading (paired).
+<H3> Level 3 (e.g., chapter) heading (paired).
+<H4> Level 4 (e.g., section) heading (paired).
+<H5> Level 5 (e.g., subsection) heading (paired).
+<H6> Level 6 (e.g., paragraph) heading (paired).
+
+Otros elementos:
+<meter>Contained content is a measurement, like length.</meter>
+<progress value="" max=""> Contains current process toward a goal, like a percentage.
+<time>time</time>
+<command> Represents something a command a user may execute.
+<datagrid> Represents data. Non-tabular or otherwise
+<output>Displays the output of a program or process</output>
+<ruby>Allows input of rubi/ruby annotations for Asian languages</ruby>
+
+
+NEW FORM CONTROLS
+
+<datetime>
+<datetime-local>
+<number>
+<range>
+<email>
+<url>
+<color>
+```
