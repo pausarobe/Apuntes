@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+	<script type="text/javascript">
+		
+		//is_array
+
+		function is_array(a){
+			return Array.isArray(a);
+
+		}
+
+		is_array([1, 2, 3, 4]);
+		is_array('asdfg');
+
+			//
+
+			function is_array(a) {
+	    		return a instanceof Array;
+			}
+
+			is_array([1, 2, 3, 4]);
+			is_array('asdfg');
+
+
+		//array_Clone
+
+		function clone(a){
+			return a.slice(0);
+
+		}
+
+		clone([1, 2, 3, 4])
+
+			//
+
+			function cloneAnArray() {
+			    var origArray = [1, 2, 3, 4, 5];
+			    var cloneArray = origArray.slice(0);
+			    return cloneArray;
+			}
+			cloneAnArray()
+
+			//
+
+			function cloneArr(){
+					Array.prototype.clone = function() {
+					return this.slice(0);
+				};
+					var Arr1 = [1,2,3,4,5,6]
+				var cloned = Arr1.clone()
+				console.log( cloned + ' - ' + Arr1)
+			}
+
+			cloneArr()
+
+
+		//##first
+
+		function first(a, n){
+			if (!n)
+				return a[0];
+			else if (n<0)
+				return []
+
+			var result = a.slice(0, n);
+			return result
+		}
+
+		first([1, 2, 3, 4], 3)
+
+		//##last
+
+		function last(a, n){
+			var result = a.slice(n);
+			return result
+		}
+
+		last([1, 2, 3, 4], 2)
+
+
+		//joinElements
+
+		function join(a){
+			return a.toString();
+
+		}
+
+		function join(a){
+			return a.join('+');
+
+		}
+
+
+		join(["Red", "Green", "White", "Black"]);
+
+		//separateEven
+
+		function separate(a){
+			var string = a.toString();
+			var arr = [];
+
+			for(i=0; i<string.length; i++){
+
+				if ((string[i-1]%2 === 0) && (string[i]%2 === 0)){
+					arr.push('-', string[i]);
+				}
+				else {
+					arr.push(string[i]);
+				}
+			}
+
+		return arr.join('');
+
+		}
+
+		separate(025468);
+
+		//sort
+
+		function sort(a){
+			return a.sort();
+		}
+
+		sort([3, 8, 7, 6, 5, -4, 3, 2, 1])
+
+		//mostFrequentItem
+
+		function frequent(a){
+
+		}
+
+		frequent([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3])
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

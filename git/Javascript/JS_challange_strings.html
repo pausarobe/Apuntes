@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+
+	//is_string
+
+		function is_array(a){
+			if (Array.isArray(a))
+				console.log(true)
+			else
+				console.log(false)
+		}
+
+		is_array([1, 2, 3, 4])
+		is_array('asdfg')
+
+	//is_Blank
+
+		function is_Blank(a){
+			if(a.length === 0)
+				console.log(true);
+			else
+				console.log(false);
+		}
+
+		is_Blank('')
+		is_Blank('abc')
+
+	//string_Array
+
+		function to_array(a){
+			var result = a.split(' ');
+			console.log(result)
+
+		}
+
+		to_array("Robin Singh")
+
+	//truncate
+
+		function truncate(a, b){
+			var result = a.slice(0, b);
+			console.log(result)
+
+		}
+
+		truncate('Robin Singh', 4)
+
+	//abbrev_name
+
+		function to_array(a){
+			var arr = a.split(' ')
+			var result = arr[0] + ' ' + arr[1].charAt(0) + '.';
+			console.log(result)
+
+		}
+
+		to_array("Robin Singh")
+
+	//protect
+
+		function protect(a){
+			var email = a.split('@');
+			var half = email[0].length/2;
+			var part1 = email[0].substring(0, (email[0].length - half));
+
+			console.log(part1 + '...@' + email[1])
+
+		}
+
+		protect("robin_singh@example.com")
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

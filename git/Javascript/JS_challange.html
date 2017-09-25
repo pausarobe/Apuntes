@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		//Calculator
+
+		function calculator(op, a, b){
+			
+			if(isNaN(a) || isNaN(b))
+				throw new Error('a and/or b is not a number')
+
+			if(op === 'sum')
+				return a+b;
+			else if(op === 'subs')
+				return a-b;
+			else if(op === 'mul')
+				return a*b;
+			else if(op === 'div')
+				return a/b;
+			else
+				console.error("Invalid operation")
+		}
+
+		calculator('sum', 1, 2)
+
+		//
+
+		//Calculator Plus
+
+		function calculator(op){
+
+			if(isNaN(arguments))
+				throw new Error('is not a number')
+			
+			var result = arguments[1];
+
+			if(op === 'sum')
+				for (i=2; i<arguments.length; i++){
+					return result += arguments[i];
+				}
+			else if(op === 'subs')
+				return 
+			else if(op === 'mul')
+				return a*b;
+			else if(op === 'div')
+				return a/b;
+			else
+				console.error("Invalid operation")
+		}
+
+		calculator('sum', 1, 2, 7)
+
+		//
+
+		function calculator(operador){
+
+			var result = arguments[1];
+
+			switch (operador.toLowerCase())
+			{
+				case 'sum':
+					for(var i=2;i<arguments.length;i++)
+					{
+						result +=arguments[i];
+					}
+					break;
+				case 'sub':
+					for(var i=2;i<arguments.length;i++)
+					{
+						result -=arguments[i];
+					}
+					break;
+				case 'mul':
+					for(var i=2;i<arguments.length;i++)
+					{
+						result *=arguments[i];
+					}
+					break;
+				case 'div':
+					for(var i=2;i<arguments.length;i++)
+					{
+						result /=arguments[i];
+					}
+					break
+			}
+			return result;
+
+		//
+
+		
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
