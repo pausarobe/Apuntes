@@ -1,0 +1,14 @@
+nav {
+	padding-left: 100px;
+	padding-right: 50px;
+	text-decoration: 50px;
+}
+
+#title {
+	font-size: 30px;
+}
+
+.active {
+	background-color: lightgrey !important;
+	color: red !important;
+}
