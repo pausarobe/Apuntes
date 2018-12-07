@@ -1,3 +1,8 @@
+INDEX
+====
+
+1. [Angular](#a_js)
+
 <hr style="border: 6px solid grey; height: 2px">
 <h1><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
 <hr style="border: 6px solid grey; height: 2px">
@@ -371,7 +376,7 @@ uxTruncate
 
 <br>
 <hr style="border: 6px solid grey; height: 2px">
-<h1 style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="40"> Javascript</h1>
+<h1 name="a_js" style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="40"> Javascript</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
 ### __1. Dates__ ###
