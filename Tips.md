@@ -1,21 +1,33 @@
 INDEX
 ====
 
-1. [Angular](#a_angular)
+- 1. [Angular](#angular)
 
-    1.1 [General](#a_angular_general)
+    - 1.1 [General](#angular_general)
     
-        1.1.1 [ngOnChanges](#a_angular_general_changes)
+        - 1.1.1 [ngOnChanges](#angular_general_changes)
+    
+        - 1.1.2 [ngOnDestroy](#angular_general_destroy)
+        
+        - 1.1.3 [ngIf + else](#angular_general_ifelse)
+        
+        - 1.1.4 [ViewChild](#angular_general_viewchild)
+        
+        - 1.1.5 [ngSwitch](#angular_general_ngswitch)
+        
+        - 1.1.6 [Upload FormData](#angular_general_formdata)
+        
+        - 1.1.7 [Callback](#angular_general_callback)
 
 <hr style="border: 6px solid grey; height: 2px">
-<h1 name="a_angular"><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
+<h1 name="angular"><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
-### <a name="a_angular_general"></a> __1. General__ ###
+### <a name="angular_general"></a> __1. General__ ###
 
 <hr style="border: 2px solid grey">
 
-#### <a name="a_angular_general_changes"></a> __1.1. ngOnChanges__ ####
+#### <a name="angular_general_changes"></a> __1.1. ngOnChanges__ ####
 
 ```Typescript
 ngOnChanges(changes: SimpleChanges) {
@@ -28,7 +40,7 @@ ngOnChanges(changes: SimpleChanges) {
 }
 ```
 
-#### __1.2. ngOnDestroy__ ####
+#### <a name="angular_general_destroy"></a> __1.2. ngOnDestroy__ ####
 
 Para dejar de subscribirse cuando el componente se destruya
 ```Typescript
@@ -43,14 +55,14 @@ ngOnDestroy() {
 }
 ```
 
-#### __1.3. ngIf + else__ ####
+#### <a name="angular_general_ifelse"></a> __1.3. ngIf + else__ ####
 
 ```html
 <p *ngIf="serverCreated; else noServer">abc</p>
 <ng-template #noServer><p>abc</p></ng-template>
 ```
 
-#### __1.4. ViewChild__ ####
+#### <a name="angular_general_viewchild"></a> __1.4. ViewChild__ ####
 
 En el .html
 ```html
@@ -65,7 +77,7 @@ this.inputFile.nativeElement.click();
 this.inputFile.nativeElement.value = '';
 ```
 
-#### __1.5. ngSwitch__ ####
+#### <a name="angular_general_ngswitch"></a> __1.5. ngSwitch__ ####
 
 ```HTML
 <div [ngSwitch]="value">
@@ -76,7 +88,7 @@ this.inputFile.nativeElement.value = '';
 </div>
 ```
 
-#### __1.6. upload Form Data__ ####
+#### <a name="angular_general_formdata"></a> __1.6. upload Form Data__ ####
 
 ```Typescript
 upload(file, type): Observable<any> {
@@ -89,7 +101,7 @@ upload(file, type): Observable<any> {
 }
 ```
 
-#### __1.7. Callback__ ####
+#### <a name="angular_general_callback"></a> __1.7. Callback__ ####
 
 ```Typescript
 onDelete(index) {
