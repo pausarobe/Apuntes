@@ -4,6 +4,8 @@ INDEX
 1. [Angular](#a_angular)
 
     1.1 [General](#a_angular_general)
+    
+        1.1.1 [ngOnChanges](#a_angular_general_changes)
 
 <hr style="border: 6px solid grey; height: 2px">
 <h1 name="a_angular"><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
@@ -13,7 +15,7 @@ INDEX
 
 <hr style="border: 2px solid grey">
 
-#### __1.1. ngOnChanges__ ####
+#### <a name="a_angular_general_changes"></a> __1.1. ngOnChanges__ ####
 
 ```Typescript
 ngOnChanges(changes: SimpleChanges) {
