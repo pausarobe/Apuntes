@@ -34,14 +34,14 @@ ngOnDestroy() {
 }
 ```
 
-#### __1.2. ngIf + else__ ####
+#### __1.3. ngIf + else__ ####
 
 ```html
 <p *ngIf="serverCreated; else noServer">abc</p>
 <ng-template #noServer><p>abc</p></ng-template>
 ```
 
-#### __1.3. ViewChild__ ####
+#### __1.4. ViewChild__ ####
 
 En el .html
 ```html
@@ -56,7 +56,7 @@ this.inputFile.nativeElement.click();
 this.inputFile.nativeElement.value = '';
 ```
 
-#### __1.4. ngSwitch__ ####
+#### __1.5. ngSwitch__ ####
 
 ```HTML
 <div [ngSwitch]="value">
@@ -67,7 +67,7 @@ this.inputFile.nativeElement.value = '';
 </div>
 ```
 
-#### __1.5. upload Form Data__ ####
+#### __1.6. upload Form Data__ ####
 
 ```Typescript
 upload(file, type): Observable<any> {
@@ -80,7 +80,7 @@ upload(file, type): Observable<any> {
 }
 ```
 
-#### __1.6. Callback__ ####
+#### __1.7. Callback__ ####
 
 ```Typescript
 onDelete(index) {
@@ -147,7 +147,7 @@ Y en el JSON correspondiente (en.json, es.json...)
 
 >tambien se pueden anidar pipe "| transtale" dentro del propio translate
 
-##### __3.1.1. traduccion en el codigo__ #####
+##### __3.1.2. traduccion en el codigo__ #####
 
 ```Typescript
 constructor (private translate: TranslateService) {}
@@ -181,7 +181,7 @@ ngOnInit() {
 }
 ```
 
-#### __4.1. Dynamic Data__ ####
+#### __4.2. Dynamic Data__ ####
 Data en las rutas de forma dinámica
 
 En el _wizard.resolver.ts_
@@ -217,14 +217,14 @@ ngOnInit() {
 }
 ```
 
-#### __4.2. Active & Exact__ ####
+#### __4.3. Active & Exact__ ####
 
 Que el path sea exacto para marcarlo como activo
 ```html
 <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 ```
 
-#### __4.3. Fetching route parameters__ ####
+#### __4.4. Fetching route parameters__ ####
 
 En el *app-routing.module*
 ```Typescript
@@ -246,7 +246,7 @@ ngOnInit() {
 }
 ```
 
-#### __4.3. Fetching route parameters Reactively__ ####
+#### __4.5. Fetching route parameters Reactively__ ####
 
 En el *app-routing.module*
 ```Typescript
@@ -327,7 +327,7 @@ En el *routing.module.ts*
 <br>
 <hr style="border: 2px solid grey">
 
-### __5. Errores Angular__ ###
+### __6. Errores Angular__ ###
 
 <hr style="border: 2px solid grey">
 
@@ -453,7 +453,7 @@ Observable.zip(
 })
 ```
 
-#### __1.1. Zip & SwitchMap__ ####
+#### __1.2. Zip & SwitchMap__ ####
 
 Encapsula las dos funciones iguales y las ejecuta para luego ejecutar el .switchMap()
 ```Javascript
@@ -463,7 +463,7 @@ Observable.zip(this.initiativeService.saveDocument(doc1), this.initiativeService
 )
 ```
 
-#### __1.2. Concat__ ####
+#### __1.3. Concat__ ####
 
 Concatena las llamadas
 ```Javascript
