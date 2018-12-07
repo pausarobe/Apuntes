@@ -1,0 +1,504 @@
+{ path: 'screen/wizard', ..., data: {message: 'info'} }
+```
+
+En el componente correspondiente
+```Typescript
+constructor (private route: ActivatedRoute) {}
+
+ngOnInit() {
+  this.errorMessage = this.route.snapshot.data['message'];
+  this.route.data.subscribe(
+    (data: Data) => this.errorMessage = data['message']
+  );
+}
+```
+
+#### __4.1. Dynamic Data__ ####
+Data en las rutas de forma dinámica
+
+En el _wizard.resolver.ts_
+```Typescript
+interface Server {
+  id: number;
+  name: string;
+}
+@Injectable()
+export class WizardResolver implements Resolve<Server> {
+  constructor(private wizardService: WizardService) {}
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    return logica
+  }
+}
+```
+En _wizard-routing.module.ts_
+```Typescript
+const routes: Routes = [
+  { path: '', 
+    component: WizardComponent, 
+    children: [...], 
+    resolve: { dataResolve: WizardResolver }
+  }
+];
+```
+Y en el componente correspondiente
+```Typescript
+ngOnInit() {
+  this.route.data.subscribe(
+    (data: Data) => this.server = dataResolve['data']
+  )
+}
+```
+
+#### __4.2. Active & Exact__ ####
+
+Que el path sea exacto para marcarlo como activo
+```html
+<li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+```
+
+#### __4.3. Fetching route parameters__ ####
+
+En el *app-routing.module*
+```Typescript
+const appRoutes: Routes = [
+  {path: 'users/:id/:name', component: UserComponent}
+];
+```
+
+En el componente correspondiente
+> url = 'users/1/pau'
+```Typescript
+constructor (private route: ActivatedRoute) {}
+
+ngOnInit() {
+  this.user = {
+    id: this.route.snapshot.params['id'],
+    name: this.route.snapshot.params['name']
+  }
+}
+```
+
+#### __4.3. Fetching route parameters Reactively__ ####
+
+En el *app-routing.module*
+```Typescript
+const appRoutes: Routes = [
+  {path: 'users/:id/:name', component: UserComponent}
+];
+```
+
+En el componente correspondiente
+> url = 'users/1/pau'
+```Typescript
+constructor (private route: ActivatedRoute) {}
+
+ngOnInit() {
+  this.route.params.subscribe(
+    (params: Params) => {
+      this.user.id = params['id'];
+      this.user.name = params['name'];
+    }
+  )
+}
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __5. Guard__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __5.1. Guard Service__ ####
+
+Pueden ser asincronos o sincronos
+- \<boolean>
+- Observable\<boolean>
+- Promise\<boolean>
+
+En *home-guard.service.ts*
+```Typescript
+@Injectable()
+export class HomeGuard implements CanActivate {
+  constructor (private authService: AuthService, private router: Router) {}
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    return this.authService.isAuthenticated().then(
+      (authenticated: boolean) => {
+        if (authenticated) { return true }
+        else { this.router.navigate(['/'])}
+      }
+    )
+  }
+}
+```
+
+En el *routing.module.ts*
+```Typescript
+{path: 'screen/wizard', canActivate: [HomeGuard], ...}
+```
+
+#### __5.2. Guard child__ ####
+
+```Typescript
+@Injectable()
+export class HomeGuard implements CanActivate {
+  constructor (private authService: AuthService, private router: Router) {}
+
+  canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    return this.canActivate(route, state);
+  }
+}
+```
+
+En el *routing.module.ts*
+```Typescript
+{path: 'screen/wizard', canActivateChild: [HomeGuard], children: [...], ...}
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __5. Errores Angular__ ###
+
+<hr style="border: 2px solid grey">
+
+Cuando el **npm run start** no ve los cambios del codigo
+- ```echo 65536 | sudo tee -a /proc/sys/fs/inotify/max_user_watches```
+
+Error: cannot find module **'@angular-devkit/core'**
+- ```npm i -D @angular-devkit/core```
+
+Error: **ngDevMode**
+
+- Borrar node-modules y package.lock.json
+- ```npm install```
+
+<br>
+<hr style="border: 6px solid grey; height: 2px">
+<h1 style="text-aling: center;"><img src="https://eui.ecdevops.eu/assets/images/landing-page/eui-logo.svg" width="40"> eUI</h1>
+<hr style="border: 6px solid grey; height: 2px">
+
+### __1. Formularios__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __1.1. Marcar como invalidos__ ####
+
+```Typescript
+this.uxService.markFormGroupTouched(this.form.controls);
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __2. Pipes__ ###
+
+<hr style="border: 2px solid grey">
+
+uxTruncate
+```
+{{ message.text | uxTruncate: 46 }}
+```
+
+<br>
+<hr style="border: 6px solid grey; height: 2px">
+<h1 style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="40"> Javascript</h1>
+<hr style="border: 6px solid grey; height: 2px">
+
+### __1. Dates__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __1.1. Fecha to new Date()__ ####
+
+Para convertir una fecha en formato dd/mm/yyyy a Date
+```Javascript
+toDate(date) {
+  const [day, month, year] = date.split('/');
+  return new Date(year, month - 1, day);
+}
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __2. Objects__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __2.1. getOwnPropertyNames()__ ####
+
+Para comprobar si un Object esta vacio
+```Javascript
+Object.getOwnPropertyNames(objeto).length === 0;
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __3. Window__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __3.1. Scroll top__ ####
+
+num1 = numero posicion X
+
+num2 = numero posicion Y
+```Javascript
+window.scrollTo(num1, num2);
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __4. Others__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __4.1. Trim__ ####
+
+Quita los espacios en blanco de los laterales
+```Javascript
+telephoneNumber.value.trim()
+```
+
+<br>
+<hr style="border: 6px solid grey; height: 2px">
+<h1 style="text-aling: center;"><img src="https://cdn-images-1.medium.com/max/1200/1*sXrpvkWUPm1K9zGKhI3MlA.png" width="40"> RxJS</h1>
+<hr style="border: 6px solid grey; height: 2px">
+
+### __1. Ejemplos__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __1.1. Zip__ ####
+
+```Javascript
+Observable.zip(
+  this.eciService.getCountries(),
+  this.reportService.getSosReporting()
+).subscribe(data => {
+  this.countries = data[0];
+  this.sosReporting(data[1])
+})
+```
+
+#### __1.1. Zip & SwitchMap__ ####
+
+Encapsula las dos funciones iguales y las ejecuta para luego ejecutar el .switchMap()
+```Javascript
+Observable.zip(this.initiativeService.saveDocument(doc1), this.initiativeService.saveDocument(doc2))
+  .switchMap(data => this.initiativeService.saveInitiative()).subscribe(
+    data => console.log(data)
+)
+```
+
+#### __1.2. Concat__ ####
+
+Concatena las llamadas
+```Javascript
+const custom$ = this.api.updateCustom();
+const twitter$ = this.api.updateTwitter();
+
+Observable.concat(custom$, twitter$).subscribe(data => console.log(data))
+```
+
+<br>
+<hr style="border: 6px solid grey; height: 2px">
+<h1 style="text-aling: center;"><img src="https://banner2.kisspng.com/20180412/agw/kisspng-cmd-exe-command-line-interface-computer-icons-user-console-5ad01cec42b224.3893284015235883322732.jpg" width="40"> Consola</h1>
+<hr style="border: 6px solid grey; height: 2px">
+
+### __1. General__ ###
+
+<hr style="border: 2px solid grey">
+
+Borrar \<nombre>
+```
+rm -rf <nombre>
+```
+
+Ver el \<archivo>
+```
+more <archivo>
+```
+
+Editar el \<archivo>
+```
+vim <archivo>
+```
+
+Comprime la \<carpeta> en un archivo llamado \<nombre>.tar.gz
+```
+tar -czvf <nombre>.tar.gz <carpeta>/
+```
+
+<br>
+<hr style="border: 6px solid grey; height: 2px">
+<h1 style="text-aling: center;"><img src="https://miro.medium.com/max/480/1*zzvdRmHGGXONZpuQ2FeqsQ.png" width="40"> Git</h1>
+<hr style="border: 6px solid grey; height: 2px">
+
+### __1. General__ ###
+
+<hr style="border: 2px solid grey">
+
+Ver el estado de la rama
+```
+git status
+``` 
+
+Historico de los comandos
+```
+git log
+```
+
+Que se ha modificado y aun no se ha subido al Stage
+```
+git diff
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __2. Repositorios__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __2.1. Nuevo__ ####
+
+Crear el archivo .git
+```
+git init
+```
+```
+git add <archivo> o git add .
+git commit -m <texto-explicativo>
+```
+
+#### __2.2. Clonar__ ####
+
+Al clonar se nos configura automaticamente un remoto: origin
+```
+git clone <url-repositorio>
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __3. Branches__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __3.1. General__ ####
+
+Tip
+```
+git log --oneline --graph --decorate --all
+```
+
+Lista de las ramas locales
+```
+git branch
+```
+
+Lista de las ramas locales (blanco) y remotas (rojo)
+```
+git branch -a
+```
+
+Cambiar de rama
+```
+git checkout <rama>
+``` 
+
+Ver que cambios hay en el remoto (origin) (¿origin, tienes novedades?)
+```
+git fetch
+```
+
+#### __3.2. Crear/Editar__ ####
+
+Crea una rama nueva
+```
+git branch <nueva-rama>
+```
+
+Crea una rama nueva a partir de la actual
+```
+git checkout -b <nueva-rama>
+```
+
+Renombrar rama
+```
+git branch -m <nombre-antiguo> <nombre-nuevo>
+```
+
+#### __3.3. Eliminar__ ####
+
+Eliminar rama local
+```
+git branch -d <rama>
+git branch -D <rama>
+```
+
+Limpia las ramas borradas del remoto (origin)
+```
+git remote prune origin
+```
+
+#### __3.4. Push__ ####
+
+Subir cambios de la rama en la que estamos a \<origin> \<rama>
+```
+git push <origin> <rama>
+```
+
+#### __3.5. Pull__ ####
+
+Bajarse codigo del remoto, \<origin> \<rama>, a la rama que estamos
+```
+git pull <origin> <rama>
+```
+
+#### __3.6. Merge__ ####
+
+Fusionar dos ramas. De la \<rama> a la rama que estamos
+```
+git merge <rama>
+```
+
+Abortar merge
+```
+git merge --abort
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __4. Errores Git__ ###
+
+<hr style="border: 2px solid grey">
+
+Cuando hay un error al cambiar de rama
+```
+git checkout <rama-de-donde-vienes>
+git reset --hard <rama>
+git clean -f -d
+```
+
+<br>
+<hr style="border: 6px solid grey; height: 2px">
+<h1 style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" width="40"> HTML 5</h1>
+<hr style="border: 6px solid grey; height: 2px">
+
+### __1. Entidades__ ###
+
+<hr style="border: 2px solid grey">
+
+- ```<``` => &lt
+- ```>``` => &gt
+- ```&``` => &amp
+- ```"``` => &quot
+- ``` ``` => &nbsp
+- ```'``` => &apos
