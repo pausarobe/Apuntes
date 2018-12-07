@@ -1,12 +1,6 @@
->Pau Sarobe
-
-<hr style="border: 6px solid grey; height: 2px">
 <h1><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
-<hr style="border: 6px solid grey; height: 2px">
 
 ### __1. General__ ###
-
-<hr style="border: 2px solid grey">
 
 #### __1.1. ngOnChanges__ ####
 
