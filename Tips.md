@@ -40,7 +40,17 @@ INDEX
     4.4 [Fetching route parameters](#angular_routes_params)
     
     4.5 [Fetching route parameters Reactively](#angular_routes_paramsreact)
+    
+5. [Guard](#angular_guard)
 
+    5.1 [Guard service](#angular_guard_service)
+    
+    5.2 [Guard child](#angular_guard_child)
+    
+6. [Errors](#angular_errors)
+
+
+<hr style="border: 6px solid grey; height: 2px">
 <hr style="border: 6px solid grey; height: 2px">
 <h1 name="angular"><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
 <hr style="border: 6px solid grey; height: 2px">
@@ -316,11 +326,11 @@ ngOnInit() {
 <br>
 <hr style="border: 2px solid grey">
 
-### __5. Guard__ ###
+### <a name="angular_guard"></a> __5. Guard__ ###
 
 <hr style="border: 2px solid grey">
 
-#### __5.1. Guard Service__ ####
+#### <a name="angular_guard_service"></a> __5.1. Guard Service__ ####
 
 Pueden ser asincronos o sincronos
 - \<boolean>
@@ -349,7 +359,7 @@ En el *routing.module.ts*
 {path: 'screen/wizard', canActivate: [HomeGuard], ...}
 ```
 
-#### __5.2. Guard child__ ####
+#### <a name="angular_guard_child"></a> __5.2. Guard child__ ####
 
 ```Typescript
 @Injectable()
@@ -370,7 +380,7 @@ En el *routing.module.ts*
 <br>
 <hr style="border: 2px solid grey">
 
-### __6. Errores Angular__ ###
+### <a name="angular_errors"></a> __6. Errores Angular__ ###
 
 <hr style="border: 2px solid grey">
 
