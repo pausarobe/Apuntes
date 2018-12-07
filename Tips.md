@@ -1,11 +1,11 @@
 INDEX
 ====
 
-[Angular](#angular)
+1. [Angular](#angular)
 
-    1 [General](#angular_general)
+    1. [General](#angular_general)
     
-        - 1.1.1 [ngOnChanges](#angular_general_changes)
+        1.1. [ngOnChanges](#angular_general_changes)
     
         1.1.1 [ngOnChanges](#angular_general_changes)
     
