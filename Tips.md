@@ -1,3 +1,173 @@
+>Pau Sarobe
+
+<hr style="border: 6px solid grey; height: 2px">
+<h1><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
+<hr style="border: 6px solid grey; height: 2px">
+
+### __1. General__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __1.1. ngOnChanges__ ####
+
+```Typescript
+ngOnChanges(changes: SimpleChanges) {
+  for (let property in changes) {
+    if (property === 'documents') {
+      console.log(changes[property].currentValue);
+      console.log(changes[property].previousValue);
+    }
+  }
+}
+```
+
+#### __1.2. ngOnDestroy__ ####
+
+Para dejar de subscribirse cuando el componente se destruya
+```Typescript
+subscription: Subscription;
+
+ngOnInit() {
+  this.subscription = this.route.params.subscribe()
+}
+
+ngOnDestroy() {
+  this.subscription.unsubscribe();
+}
+```
+
+#### __1.2. ngIf + else__ ####
+
+```html
+<p *ngIf="serverCreated; else noServer">abc</p>
+<ng-template #noServer><p>abc</p></ng-template>
+```
+
+#### __1.3. ViewChild__ ####
+
+En el .html
+```html
+<div #inputFile></div>
+```
+En el .ts
+```Typescript
+@ViewChild('inputFile') input: ElementRef;
+
+//Ejemplos
+this.inputFile.nativeElement.click();
+this.inputFile.nativeElement.value = '';
+```
+
+#### __1.4. ngSwitch__ ####
+
+```HTML
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="5">Value is 5</p>
+  <p *ngSwitchCase="10">Value is 10</p>
+  <p *ngSwitchCase="15">Value is 15</p>
+  <p *ngSwitchDefault>Value is default</p>
+</div>
+```
+
+#### __1.5. upload Form Data__ ####
+
+```Typescript
+upload(file, type): Observable<any> {
+  const form = new FormData();
+
+  form.append('file', file, file.name);
+  form.append('type', type);
+
+  return this.http.post(this.api, form);
+}
+```
+
+#### __1.6. Callback__ ####
+
+```Typescript
+onDelete(index) {
+  const callback = () => this.confirmDelete(index);
+  this.confirmAction.confirm(this.deleteWarning, callback);
+}
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __2. Dates__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __2.1. Date pipe__ ####
+
+```Typescript
+constructor(private datePipe: DatePipe) {}
+
+this.datePipe.transform(this.startingDate.value, 'dd/MM/yyyy');
+```
+
+#### __2.2. Format date__ ####
+
+```Typescript
+constructor (private datePipe: DatePipe) {}
+
+if (this.birthDate.value instanceof Date) {
+  formatDate = this.datePipe.transform(
+    this.birthDate.value, 'dd/MM/yyyy'
+  );
+}
+
+if (this.birthDate.value instanceof Object && this.birthDate.value.hasOwnProperty('_isAMomentObject')) {
+  formatDate = this.birthDate.value.format('dd/MM/yyyy');
+}
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __3. i18n__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __3.1. ngTranslate__ ####
+
+##### __3.1.1. con variables__ #####
+
+```html
+<div *ngFor="let top of topCountries"> {{ 'etiqueta' | translate: {
+  percent: top.percentage | uxNumberFormat,
+  code: top.countryCode | uppercase,
+  count: top.count | uxNumberFormat,
+  threshold: top.treshold | uxNumberFormat
+}}}
+</div>
+```
+Y en el JSON correspondiente (en.json, es.json...)
+```json
+"etiqueta": "{{percent}}% of {{code}} thresold ({{count}} / {{threshold}})"
+```
+
+>tambien se pueden anidar pipe "| transtale" dentro del propio translate
+
+##### __3.1.1. traduccion en el codigo__ #####
+
+```Typescript
+constructor (private translate: TranslateService) {}
+
+this.translate.instant(etiqueta)
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### __4. Routes__ ###
+
+<hr style="border: 2px solid grey">
+
+#### __4.1. Static Data__ ####
+
+En *wizard-routing.module.ts*
+```Typescript
 { path: 'screen/wizard', ..., data: {message: 'info'} }
 ```
 
