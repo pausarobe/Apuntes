@@ -1,23 +1,23 @@
 INDEX
 ====
 
-- 1. [Angular](#angular)
+1. [Angular](#angular)
 
-    - 1.1 [General](#angular_general)
+    1. [General](#angular_general)
     
-        - 1.1.1 [ngOnChanges](#angular_general_changes)
+        1. [ngOnChanges](#angular_general_changes)
     
-        - 1.1.2 [ngOnDestroy](#angular_general_destroy)
+        2. [ngOnDestroy](#angular_general_destroy)
         
-        - 1.1.3 [ngIf + else](#angular_general_ifelse)
+        3. [ngIf + else](#angular_general_ifelse)
         
-        - 1.1.4 [ViewChild](#angular_general_viewchild)
+        4. [ViewChild](#angular_general_viewchild)
         
-        - 1.1.5 [ngSwitch](#angular_general_ngswitch)
+        5. [ngSwitch](#angular_general_ngswitch)
         
-        - 1.1.6 [Upload FormData](#angular_general_formdata)
+        6. [Upload FormData](#angular_general_formdata)
         
-        - 1.1.7 [Callback](#angular_general_callback)
+        7. [Callback](#angular_general_callback)
 
 <hr style="border: 6px solid grey; height: 2px">
 <h1 name="angular"><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
