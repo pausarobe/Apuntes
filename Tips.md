@@ -5,25 +5,25 @@ INDEX
 
 1. [General](#angular_general)
     
-    - 1.1 [ngOnChanges](#angular_general_changes)
+    1.1 [ngOnChanges](#angular_general_changes)
     
-    - 1.2 [ngOnDestroy](#angular_general_destroy)
+    1.2 [ngOnDestroy](#angular_general_destroy)
         
-    - 1.3 [ngIf + else](#angular_general_ifelse)
+    1.3 [ngIf + else](#angular_general_ifelse)
         
-    - 1.4 [ViewChild](#angular_general_viewchild)
+    1.4 [ViewChild](#angular_general_viewchild)
         
-    - 1.5 [ngSwitch](#angular_general_ngswitch)
+    1.5 [ngSwitch](#angular_general_ngswitch)
         
-    - 1.6 [Upload FormData](#angular_general_formdata)
+    1.6 [Upload FormData](#angular_general_formdata)
         
-    - 1.7 [Callback](#angular_general_callback)
+    1.7 [Callback](#angular_general_callback)
     
-    2.1 [Dates](#angular_dates)
+2. [Dates](#angular_dates)
     
-    - 2.1.1 [Date pipe](#angular_dates_pipe)
+    2.1 [Date pipe](#angular_dates_pipe)
     
-    - 2.1.2 []
+    2.2 [Format date](#angular_dates_format)
 
 <hr style="border: 6px solid grey; height: 2px">
 <h1 name="angular"><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
@@ -119,11 +119,11 @@ onDelete(index) {
 <br>
 <hr style="border: 2px solid grey">
 
-### __2. Dates__ ###
+### <a name="angular_dates"></a> __2. Dates__ ###
 
 <hr style="border: 2px solid grey">
 
-#### __2.1. Date pipe__ ####
+#### <a name="angular_dates_pipe"></a> __2.1. Date pipe__ ####
 
 ```Typescript
 constructor(private datePipe: DatePipe) {}
@@ -131,7 +131,7 @@ constructor(private datePipe: DatePipe) {}
 this.datePipe.transform(this.startingDate.value, 'dd/MM/yyyy');
 ```
 
-#### __2.2. Format date__ ####
+#### <a name="angular_dates_format"></a> __2.2. Format date__ ####
 
 ```Typescript
 constructor (private datePipe: DatePipe) {}
