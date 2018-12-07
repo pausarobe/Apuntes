@@ -1,6 +1,9 @@
 <h1><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
 
 ***
+```
+<hr style="border: 2px solid grey">
+```
 
 ### __1. General__ ###
 
