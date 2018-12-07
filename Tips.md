@@ -1,10 +1,12 @@
-<h1><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
+>Pau Sarobe
 
-***
+<hr style="border: 6px solid grey; height: 2px">
+<h1><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
+<hr style="border: 6px solid grey; height: 2px">
 
 ### __1. General__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __1.1. ngOnChanges__ ####
 
@@ -89,11 +91,12 @@ onDelete(index) {
 }
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __2. Dates__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __2.1. Date pipe__ ####
 
@@ -119,11 +122,12 @@ if (this.birthDate.value instanceof Object && this.birthDate.value.hasOwnPropert
 }
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __3. i18n__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __3.1. ngTranslate__ ####
 
@@ -153,11 +157,12 @@ constructor (private translate: TranslateService) {}
 this.translate.instant(etiqueta)
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __4. Routes__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __4.1. Static Data__ ####
 
@@ -267,11 +272,12 @@ ngOnInit() {
 }
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __5. Guard__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __5.1. Guard Service__ ####
 
@@ -320,11 +326,12 @@ En el *routing.module.ts*
 {path: 'screen/wizard', canActivateChild: [HomeGuard], children: [...], ...}
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __5. Errores Angular__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 Cuando el **npm run start** no ve los cambios del codigo
 - ```echo 65536 | sudo tee -a /proc/sys/fs/inotify/max_user_watches```
@@ -337,16 +344,14 @@ Error: **ngDevMode**
 - Borrar node-modules y package.lock.json
 - ```npm install```
 
-***
-***
-
+<br>
+<hr style="border: 6px solid grey; height: 2px">
 <h1 style="text-aling: center;"><img src="https://eui.ecdevops.eu/assets/images/landing-page/eui-logo.svg" width="40"> eUI</h1>
-
-***
+<hr style="border: 6px solid grey; height: 2px">
 
 ### __1. Formularios__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __1.1. Marcar como invalidos__ ####
 
@@ -354,28 +359,26 @@ Error: **ngDevMode**
 this.uxService.markFormGroupTouched(this.form.controls);
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __2. Pipes__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 uxTruncate
 ```
 {{ message.text | uxTruncate: 46 }}
 ```
 
-***
-
-***
-
+<br>
+<hr style="border: 6px solid grey; height: 2px">
 <h1 style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="40"> Javascript</h1>
-
-***
+<hr style="border: 6px solid grey; height: 2px">
 
 ### __1. Dates__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __1.1. Fecha to new Date()__ ####
 
@@ -387,11 +390,12 @@ toDate(date) {
 }
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __2. Objects__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __2.1. getOwnPropertyNames()__ ####
 
@@ -400,11 +404,12 @@ Para comprobar si un Object esta vacio
 Object.getOwnPropertyNames(objeto).length === 0;
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __3. Window__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __3.1. Scroll top__ ####
 
@@ -415,11 +420,12 @@ num2 = numero posicion Y
 window.scrollTo(num1, num2);
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __4. Others__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __4.1. Trim__ ####
 
@@ -428,17 +434,14 @@ Quita los espacios en blanco de los laterales
 telephoneNumber.value.trim()
 ```
 
-***
-
-***
-
+<br>
+<hr style="border: 6px solid grey; height: 2px">
 <h1 style="text-aling: center;"><img src="https://cdn-images-1.medium.com/max/1200/1*sXrpvkWUPm1K9zGKhI3MlA.png" width="40"> RxJS</h1>
-
-***
+<hr style="border: 6px solid grey; height: 2px">
 
 ### __1. Ejemplos__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __1.1. Zip__ ####
 
@@ -472,17 +475,14 @@ const twitter$ = this.api.updateTwitter();
 Observable.concat(custom$, twitter$).subscribe(data => console.log(data))
 ```
 
-***
-
-***
-
+<br>
+<hr style="border: 6px solid grey; height: 2px">
 <h1 style="text-aling: center;"><img src="https://banner2.kisspng.com/20180412/agw/kisspng-cmd-exe-command-line-interface-computer-icons-user-console-5ad01cec42b224.3893284015235883322732.jpg" width="40"> Consola</h1>
-
-***
+<hr style="border: 6px solid grey; height: 2px">
 
 ### __1. General__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 Borrar \<nombre>
 ```
@@ -504,17 +504,14 @@ Comprime la \<carpeta> en un archivo llamado \<nombre>.tar.gz
 tar -czvf <nombre>.tar.gz <carpeta>/
 ```
 
-***
-
-***
-
+<br>
+<hr style="border: 6px solid grey; height: 2px">
 <h1 style="text-aling: center;"><img src="https://miro.medium.com/max/480/1*zzvdRmHGGXONZpuQ2FeqsQ.png" width="40"> Git</h1>
-
-***
+<hr style="border: 6px solid grey; height: 2px">
 
 ### __1. General__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 Ver el estado de la rama
 ```
@@ -531,11 +528,12 @@ Que se ha modificado y aun no se ha subido al Stage
 git diff
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __2. Repositorios__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __2.1. Nuevo__ ####
 
@@ -555,11 +553,12 @@ Al clonar se nos configura automaticamente un remoto: origin
 git clone <url-repositorio>
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __3. Branches__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 #### __3.1. General__ ####
 
@@ -644,11 +643,12 @@ Abortar merge
 git merge --abort
 ```
 
-***
+<br>
+<hr style="border: 2px solid grey">
 
 ### __4. Errores Git__ ###
 
-***
+<hr style="border: 2px solid grey">
 
 Cuando hay un error al cambiar de rama
 ```
@@ -657,13 +657,10 @@ git reset --hard <rama>
 git clean -f -d
 ```
 
-***
-
-***
-
+<br>
+<hr style="border: 6px solid grey; height: 2px">
 <h1 style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" width="40"> HTML 5</h1>
-
-***
+<hr style="border: 6px solid grey; height: 2px">
 
 ### __1. Entidades__ ###
 
