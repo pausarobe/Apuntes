@@ -24,6 +24,22 @@ INDEX
     2.1 [Date pipe](#angular_dates_pipe)
     
     2.2 [Format date](#angular_dates_format)
+    
+3. [i18n](#angular_i18n)
+
+    3.1 [ngTranslate](#angular_i18n_ngtranslate)
+    
+4. [Routes](#angular_routes)
+
+    4.1 [Static Data](#angular_routes_staticdata)
+    
+    4.2 [Dynamic Data](#angular_routes_dynamicdata)
+    
+    4.3 [Active & Exact](#angular_routes_activeexact)
+    
+    4.4 [Fetching route parameters](#angular_routes_params)
+    
+    4.5 [Fetching route parameters Reactively](#angular_routes_paramsreact)
 
 <hr style="border: 6px solid grey; height: 2px">
 <h1 name="angular"><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">ANGULAR</h1>
@@ -150,11 +166,11 @@ if (this.birthDate.value instanceof Object && this.birthDate.value.hasOwnPropert
 <br>
 <hr style="border: 2px solid grey">
 
-### __3. i18n__ ###
+### <a name="angular_i18n"></a> __3. i18n__ ###
 
 <hr style="border: 2px solid grey">
 
-#### __3.1. ngTranslate__ ####
+#### <a name="angular_i18n_ngtranslate"></a> __3.1. ngTranslate__ ####
 
 ##### __3.1.1. con variables__ #####
 
@@ -185,11 +201,11 @@ this.translate.instant(etiqueta)
 <br>
 <hr style="border: 2px solid grey">
 
-### __4. Routes__ ###
+### <a name="angular_routes"></a> __4. Routes__ ###
 
 <hr style="border: 2px solid grey">
 
-#### __4.1. Static Data__ ####
+#### <a name="angular_routes_staticdata"></a> __4.1. Static Data__ ####
 
 En *wizard-routing.module.ts*
 ```Typescript
@@ -208,7 +224,7 @@ ngOnInit() {
 }
 ```
 
-#### __4.2. Dynamic Data__ ####
+#### <a name="angular_routes_dynamicdata"></a> __4.2. Dynamic Data__ ####
 Data en las rutas de forma dinámica
 
 En el _wizard.resolver.ts_
@@ -244,14 +260,14 @@ ngOnInit() {
 }
 ```
 
-#### __4.3. Active & Exact__ ####
+#### <a name="angular_routes_activeexact"></a> __4.3. Active & Exact__ ####
 
 Que el path sea exacto para marcarlo como activo
 ```html
 <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 ```
 
-#### __4.4. Fetching route parameters__ ####
+#### <a name="angular_routes_params"></a> __4.4. Fetching route parameters__ ####
 
 En el *app-routing.module*
 ```Typescript
@@ -273,7 +289,7 @@ ngOnInit() {
 }
 ```
 
-#### __4.5. Fetching route parameters Reactively__ ####
+#### <a name="angular_routes_paramsreact"></a> __4.5. Fetching route parameters Reactively__ ####
 
 En el *app-routing.module*
 ```Typescript
