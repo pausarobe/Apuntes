@@ -47,7 +47,13 @@ INDEX
     
     5.2 [Guard child](#angular_guard_child)
     
-6. [Errors](#angular_errors)
+6. [Form](#angular_form)
+
+    6.1 [Form Array](#angular_form_array)
+    
+    6.2 [Custom Validator](#angular_form_customvalidator)
+    
+7. [Errors](#angular_errors)
 
 
 <hr style="border: 6px solid grey; height: 2px">
@@ -380,7 +386,63 @@ En el *routing.module.ts*
 <br>
 <hr style="border: 2px solid grey">
 
-### <a name="angular_errors"></a> __6. Errores Angular__ ###
+### <a name="angular_form"></a> __6. Forms__ ###
+
+<hr style="border: 2px solid grey">
+
+#### <a name="angular_form_array"></a> __6.1. Form Array__ ####
+
+En el HTML correspondiente
+```html
+<form [formGroup]="signupForm">
+    <div formArrayName="hobbies">
+        <div *ngFor="let hobbyControl of signupForm.get('hobbies').controls; let i = index">
+            <input type="text" [formControlName]="i">
+        </div>
+    </div>
+</form>
+```
+
+En el TS correspondiente
+```Typescript
+this.signupForm = new FormGroup({
+    'userData': new FormGroup({
+        'username': new FormControl(null),
+        'email': new FormControl(null,  Validatoris.email)
+    }),
+    'hobbies': new FormArray([])
+});
+
+onAddHobby() {
+    const control = new FormControl(null, Validators.required);
+    (<FormArray>this.signupForm.get('hobbies')).push(control);
+}
+```
+
+#### <a name="angular_form_customvalidator"></a> __6.1. Custom Validator__ ####
+
+```Typescript
+buildForm() {
+    this.form = this.formBuilder.group({
+        'earlyClosure': [null, [Validators,required, this.closureDays.bind(this)] ]
+    })
+}
+
+closureDays(control: AbstractControl): ValidationErrors | null {
+    const minDate = new Date();
+    if (minDate > control.value) {
+        return { requiredDays: true };
+    }
+    return null;
+}
+```
+> Por ejemplo podemos utilizar: *ngIf="earlyClosure.errors['requiredDays']"
+
+
+<br>
+<hr style="border: 2px solid grey">
+
+### <a name="angular_errors"></a> __7. Errores Angular__ ###
 
 <hr style="border: 2px solid grey">
 
