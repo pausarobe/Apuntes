@@ -53,6 +53,10 @@ INDEX
     
     6.2 [Custom Validator](#angular_form_customvalidator)
     
+    6.3 [Custom Async Validator](#angular_form_asyncvalidator)
+    
+    6.4 [Image preview](#angular_form_imgpreview)
+    
 7. [Errors](#angular_errors)
 
 
@@ -419,7 +423,12 @@ onAddHobby() {
 }
 ```
 
-#### <a name="angular_form_customvalidator"></a> __6.1. Custom Validator__ ####
+Para borrar
+```Typescript
+(<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
+```
+
+#### <a name="angular_form_customvalidator"></a> __6.2. Custom Validator__ ####
 
 ```Typescript
 buildForm() {
@@ -438,6 +447,36 @@ closureDays(control: AbstractControl): ValidationErrors | null {
 ```
 > Por ejemplo podemos utilizar: *ngIf="earlyClosure.errors['requiredDays']"
 
+#### <a name="angular_form_asyncvalidator"></a> __6.3. Custom Async Validator__ ####
+
+```Typescript
+this.signupForm = new FormGroup({
+    'email': new FormControl(null, [Validators.required, Validators.email], this.forbiddenEmails)
+});
+
+forbiddenEmails(control: FormControl): Promise<any> | Obserbable<any> {
+    const promise = new Promise<any>((resolve, reject) => {
+        setTimeout(() => {
+            if (control.value === 'test@test.com') {
+                resolve({ 'emailIsForbidden': true });
+            } else {
+                resolve(null);
+            }
+        }, 1500);
+    });
+    return promise;
+}
+```
+Antes de poner el *ng-valid* o *ng-invalid* angular pone un *ng-pending*
+
+#### <a name="angular_form_imgpreview"></a> __6.4. Image preview__ ####
+
+```html
+<label for="imagePath">Image Url</label>
+<input #imagePath formControlName="imagePath" ...>
+
+<img [src="imagePath.value" class="img-responsive">
+```
 
 <br>
 <hr style="border: 2px solid grey">
