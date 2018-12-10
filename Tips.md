@@ -1,4 +1,10 @@
 [<img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">](#angular)
+[<img src="https://eui.ecdevops.eu/assets/images/landing-page/eui-logo.svg" width="40">](#eui)
+[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="40">](#js)
+[<img src="https://cdn-images-1.medium.com/max/1200/1*sXrpvkWUPm1K9zGKhI3MlA.png" width="40">](#rxjs)
+[<img src="https://banner2.kisspng.com/20180412/agw/kisspng-cmd-exe-command-line-interface-computer-icons-user-console-5ad01cec42b224.3893284015235883322732.jpg" width="40">](#console)
+[<img src="https://miro.medium.com/max/480/1*zzvdRmHGGXONZpuQ2FeqsQ.png" width="40">](#git)
+[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" width="40">](#html)
 
 INDEX
 ====
@@ -535,7 +541,7 @@ uxTruncate
 
 <br>
 <hr style="border: 6px solid grey; height: 2px">
-<h1 name="a_js" style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="40"> Javascript</h1>
+<h1 name="js" style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="40"> Javascript</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
 ### __1. Dates__ ###
@@ -598,7 +604,7 @@ telephoneNumber.value.trim()
 
 <br>
 <hr style="border: 6px solid grey; height: 2px">
-<h1 style="text-aling: center;"><img src="https://cdn-images-1.medium.com/max/1200/1*sXrpvkWUPm1K9zGKhI3MlA.png" width="40"> RxJS</h1>
+<h1 name="rxjs" style="text-aling: center;"><img src="https://cdn-images-1.medium.com/max/1200/1*sXrpvkWUPm1K9zGKhI3MlA.png" width="40"> RxJS</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
 ### __1. Ejemplos__ ###
@@ -639,7 +645,7 @@ Observable.concat(custom$, twitter$).subscribe(data => console.log(data))
 
 <br>
 <hr style="border: 6px solid grey; height: 2px">
-<h1 style="text-aling: center;"><img src="https://banner2.kisspng.com/20180412/agw/kisspng-cmd-exe-command-line-interface-computer-icons-user-console-5ad01cec42b224.3893284015235883322732.jpg" width="40"> Consola</h1>
+<h1 name="console" style="text-aling: center;"><img src="https://banner2.kisspng.com/20180412/agw/kisspng-cmd-exe-command-line-interface-computer-icons-user-console-5ad01cec42b224.3893284015235883322732.jpg" width="40"> Console</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
 ### __1. General__ ###
@@ -668,7 +674,7 @@ tar -czvf <nombre>.tar.gz <carpeta>/
 
 <br>
 <hr style="border: 6px solid grey; height: 2px">
-<h1 style="text-aling: center;"><img src="https://miro.medium.com/max/480/1*zzvdRmHGGXONZpuQ2FeqsQ.png" width="40"> Git</h1>
+<h1 name="git" style="text-aling: center;"><img src="https://miro.medium.com/max/480/1*zzvdRmHGGXONZpuQ2FeqsQ.png" width="40"> Git</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
 ### __1. General__ ###
@@ -821,7 +827,7 @@ git clean -f -d
 
 <br>
 <hr style="border: 6px solid grey; height: 2px">
-<h1 style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" width="40"> HTML 5</h1>
+<h1 name="html" style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" width="40"> HTML 5</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
 ### __1. Entidades__ ###
