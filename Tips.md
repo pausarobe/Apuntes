@@ -66,13 +66,71 @@
     
 7. [Errors](#angular_errors)
 
-[__eUI__](#eui)
+[__[ eUI ]__](#eui)
 
 1. [Forms](#eui_forms)
 
     1.1 [Mark as Invalid](#eui_forms_invalid)
     
 2. [Pipes](#eui_pipes)
+
+[__[ Javascript ]__](#js)
+
+1. [Dates](#js_dates)
+
+    1.1 [new Date()](#js_dates_new)
+    
+2. [Objects](#js_objects)
+
+    2.1 [getOwnPropertyNames()](#js_objects_own)
+    
+3. [Others](#js_others)
+
+    3.1 [Trim](#js_others_trim)
+    
+    3.2 [scroll top](#js_others_scroll)
+
+[__[ RxJS ]__](#rxjs)
+
+1. [Examples](#rxjs_examples)
+
+    1.1 [Zip](#rxjs_examples_zip)
+    
+    1.2 [Zip & SwitchMap](#rxjs_examples_zipshitchmap)
+    
+    1.3 [Concat](#rxjs_examples_concat)
+
+[__[ Console ]__](#console)
+
+[__[ Git ]__](#git)
+
+1. [General](#git_general)
+
+2. [Repositories](#git_repo)
+
+    2.1 [New](#git_repo_new)
+    
+    2.2 [Clone](#git_repo-clone)
+    
+3. [Branches](#git_branch)
+
+    3.1 [General](#git_branch_general)
+    
+    3.2 [New/Edit](#git_branch_newedit)
+    
+    3.3 [Delete](#git_branch_delete)
+    
+    3.4 [Push](#git_branch_push)
+    
+    3.5 [Pull](#git_branch_pull)
+    
+    3.6 [Merge](#git_branch_merge)
+    
+4. [Git Errors](#git_errors)
+
+[__[ HTML5 ]__](#html)
+
+1. [Entities](#html_entities)
 
 
 <hr style="border: 6px solid grey; height: 2px">
@@ -543,11 +601,11 @@ uxTruncate
 <h1 name="js" style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="40"> Javascript</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
-### __1. Dates__ ###
+### <a name="js_dates"></a> __1. Dates__ ###
 
 <hr style="border: 2px solid grey">
 
-#### __1.1. Fecha to new Date()__ ####
+#### <a name="js_dates_new"></a> __1.1. Fecha to new Date()__ ####
 
 Para convertir una fecha en formato dd/mm/yyyy a Date
 ```Javascript
@@ -560,11 +618,11 @@ toDate(date) {
 <br>
 <hr style="border: 2px solid grey">
 
-### __2. Objects__ ###
+### <a name="js_objects"></a> __2. Objects__ ###
 
 <hr style="border: 2px solid grey">
 
-#### __2.1. getOwnPropertyNames()__ ####
+#### <a name="js_objects_own"></a> __2.1. getOwnPropertyNames()__ ####
 
 Para comprobar si un Object esta vacio
 ```Javascript
@@ -574,11 +632,18 @@ Object.getOwnPropertyNames(objeto).length === 0;
 <br>
 <hr style="border: 2px solid grey">
 
-### __3. Window__ ###
+### <a name="js_others"></a> __3. Others__ ###
 
 <hr style="border: 2px solid grey">
 
-#### __3.1. Scroll top__ ####
+#### <a name="js_others_trim"></a> __3.1. Trim__ ####
+
+Quita los espacios en blanco de los laterales
+```Javascript
+telephoneNumber.value.trim()
+```
+
+#### <a name="js_others_scroll"></a> __3.2. Scroll top__ ####
 
 num1 = numero posicion X
 
@@ -588,29 +653,15 @@ window.scrollTo(num1, num2);
 ```
 
 <br>
-<hr style="border: 2px solid grey">
-
-### __4. Others__ ###
-
-<hr style="border: 2px solid grey">
-
-#### __4.1. Trim__ ####
-
-Quita los espacios en blanco de los laterales
-```Javascript
-telephoneNumber.value.trim()
-```
-
-<br>
 <hr style="border: 6px solid grey; height: 2px">
 <h1 name="rxjs" style="text-aling: center;"><img src="https://cdn-images-1.medium.com/max/1200/1*sXrpvkWUPm1K9zGKhI3MlA.png" width="40"> RxJS</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
-### __1. Ejemplos__ ###
+### <a name="rxjs_examples"></a> __1. Examples__ ###
 
 <hr style="border: 2px solid grey">
 
-#### __1.1. Zip__ ####
+#### <a name="rxjs_examples_zip"></a> __1.1. Zip__ ####
 
 ```Javascript
 Observable.zip(
@@ -622,7 +673,7 @@ Observable.zip(
 })
 ```
 
-#### __1.2. Zip & SwitchMap__ ####
+#### <a name="rxjs_examples_zipswitchmap"></a> __1.2. Zip & SwitchMap__ ####
 
 Encapsula las dos funciones iguales y las ejecuta para luego ejecutar el .switchMap()
 ```Javascript
@@ -632,7 +683,7 @@ Observable.zip(this.initiativeService.saveDocument(doc1), this.initiativeService
 )
 ```
 
-#### __1.3. Concat__ ####
+#### <a name="rxjs_examples_concat"></a> __1.3. Concat__ ####
 
 Concatena las llamadas
 ```Javascript
@@ -646,8 +697,6 @@ Observable.concat(custom$, twitter$).subscribe(data => console.log(data))
 <hr style="border: 6px solid grey; height: 2px">
 <h1 name="console" style="text-aling: center;"><img src="https://banner2.kisspng.com/20180412/agw/kisspng-cmd-exe-command-line-interface-computer-icons-user-console-5ad01cec42b224.3893284015235883322732.jpg" width="40"> Console</h1>
 <hr style="border: 6px solid grey; height: 2px">
-
-### __1. General__ ###
 
 <hr style="border: 2px solid grey">
 
@@ -676,7 +725,7 @@ tar -czvf <nombre>.tar.gz <carpeta>/
 <h1 name="git" style="text-aling: center;"><img src="https://miro.medium.com/max/480/1*zzvdRmHGGXONZpuQ2FeqsQ.png" width="40"> Git</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
-### __1. General__ ###
+### <a name="git_general"></a> __1. General__ ###
 
 <hr style="border: 2px solid grey">
 
@@ -698,11 +747,11 @@ git diff
 <br>
 <hr style="border: 2px solid grey">
 
-### __2. Repositorios__ ###
+### <a name="git_repo"></a> __2. Repositorios__ ###
 
 <hr style="border: 2px solid grey">
 
-#### __2.1. Nuevo__ ####
+#### <a name="git_repo_new"></a> __2.1. Nuevo__ ####
 
 Crear el archivo .git
 ```
@@ -713,7 +762,7 @@ git add <archivo> o git add .
 git commit -m <texto-explicativo>
 ```
 
-#### __2.2. Clonar__ ####
+#### <a name="git_repo_clone"></a> __2.2. Clonar__ ####
 
 Al clonar se nos configura automaticamente un remoto: origin
 ```
@@ -723,11 +772,11 @@ git clone <url-repositorio>
 <br>
 <hr style="border: 2px solid grey">
 
-### __3. Branches__ ###
+### <a name="git_branch"></a> __3. Branches__ ###
 
 <hr style="border: 2px solid grey">
 
-#### __3.1. General__ ####
+#### <a name="git_branch_general"></a> __3.1. General__ ####
 
 Tip
 ```
@@ -754,7 +803,7 @@ Ver que cambios hay en el remoto (origin) (¿origin, tienes novedades?)
 git fetch
 ```
 
-#### __3.2. Crear/Editar__ ####
+#### <a name="git_branch_newedit"></a> __3.2. New/Edit__ ####
 
 Crea una rama nueva
 ```
@@ -771,7 +820,7 @@ Renombrar rama
 git branch -m <nombre-antiguo> <nombre-nuevo>
 ```
 
-#### __3.3. Eliminar__ ####
+#### <a name="git_branch_delete"></a> __3.3. Delete__ ####
 
 Eliminar rama local
 ```
@@ -784,21 +833,21 @@ Limpia las ramas borradas del remoto (origin)
 git remote prune origin
 ```
 
-#### __3.4. Push__ ####
+#### <a name="git_branch_push"></a> __3.4. Push__ ####
 
 Subir cambios de la rama en la que estamos a \<origin> \<rama>
 ```
 git push <origin> <rama>
 ```
 
-#### __3.5. Pull__ ####
+#### <a name="git_branch_pull"></a> __3.5. Pull__ ####
 
 Bajarse codigo del remoto, \<origin> \<rama>, a la rama que estamos
 ```
 git pull <origin> <rama>
 ```
 
-#### __3.6. Merge__ ####
+#### <a name="git_branch_merge"></a> __3.6. Merge__ ####
 
 Fusionar dos ramas. De la \<rama> a la rama que estamos
 ```
@@ -813,7 +862,7 @@ git merge --abort
 <br>
 <hr style="border: 2px solid grey">
 
-### __4. Errores Git__ ###
+### <a name="git_errors"></a> __4. Git errors__ ###
 
 <hr style="border: 2px solid grey">
 
@@ -829,7 +878,7 @@ git clean -f -d
 <h1 name="html" style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" width="40"> HTML 5</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
-### __1. Entidades__ ###
+### <a name="html_entities"></a> __1. Entities__ ###
 
 <hr style="border: 2px solid grey">
 
