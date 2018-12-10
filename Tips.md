@@ -6,10 +6,9 @@
 [<img src="https://miro.medium.com/max/480/1*zzvdRmHGGXONZpuQ2FeqsQ.png" width="40">](#git)
 [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" width="40">](#html)
 
-INDEX
-====
+#### INDEX ####
 
-[__Angular__](#angular)
+[__[ Angular ]__](#angular)
 
 1. [General](#angular_general)
     
