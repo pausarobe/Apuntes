@@ -1,3 +1,5 @@
+[<img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="40">](#angular)
+
 INDEX
 ====
 
