@@ -47,7 +47,7 @@ INDEX
     
     5.2 [Guard child](#angular_guard_child)
     
-6. [Form](#angular_form)
+6. [Forms](#angular_form)
 
     6.1 [Form Array](#angular_form_array)
     
@@ -58,6 +58,14 @@ INDEX
     6.4 [Image preview](#angular_form_imgpreview)
     
 7. [Errors](#angular_errors)
+
+[__eUI__](#eui)
+
+1. [Forms](#eui_forms)
+
+    1.1 [Mark as Invalid](#eui_forms_invalid)
+    
+2. [Pipes](#eui_pipes)
 
 
 <hr style="border: 6px solid grey; height: 2px">
@@ -475,7 +483,7 @@ Antes de poner el *ng-valid* o *ng-invalid* angular pone un *ng-pending*
 <label for="imagePath">Image Url</label>
 <input #imagePath formControlName="imagePath" ...>
 
-<img [src="imagePath.value" class="img-responsive">
+<img [src]="imagePath.value" class="img-responsive">
 ```
 
 <br>
@@ -498,14 +506,14 @@ Error: **ngDevMode**
 
 <br>
 <hr style="border: 6px solid grey; height: 2px">
-<h1 style="text-aling: center;"><img src="https://eui.ecdevops.eu/assets/images/landing-page/eui-logo.svg" width="40"> eUI</h1>
+<h1 name="eui" style="text-aling: center;"><img src="https://eui.ecdevops.eu/assets/images/landing-page/eui-logo.svg" width="40"> eUI</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
-### __1. Formularios__ ###
+### <a name="eui_forms"></a> __1. Forms__ ###
 
 <hr style="border: 2px solid grey">
 
-#### __1.1. Marcar como invalidos__ ####
+#### <a name="eui_forms_invalid"></a> __1.1. Marcar como invalidos__ ####
 
 ```Typescript
 this.uxService.markFormGroupTouched(this.form.controls);
@@ -514,7 +522,7 @@ this.uxService.markFormGroupTouched(this.form.controls);
 <br>
 <hr style="border: 2px solid grey">
 
-### __2. Pipes__ ###
+### <a name="eui_pipes"></a> __2. Pipes__ ###
 
 <hr style="border: 2px solid grey">
 
