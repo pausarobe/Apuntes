@@ -901,6 +901,8 @@ git clean -f -d
 
 ### <a name="vsc_errors"></a> __1. Errors__ ###
 
+<hr style="border: 6px solid grey; height: 2px">
+
 Cuando no puede indexar muchos archivos
 - add the following line to either */etc/sysct1.conf* file or a new *\*.conf* file under */etc/sysctl.d/* directory:
 ```fs.inotify.max_user_watches=524288```
