@@ -5,6 +5,7 @@
 [<img src="https://banner2.kisspng.com/20180412/agw/kisspng-cmd-exe-command-line-interface-computer-icons-user-console-5ad01cec42b224.3893284015235883322732.jpg" width="40">](#console)
 [<img src="https://miro.medium.com/max/480/1*zzvdRmHGGXONZpuQ2FeqsQ.png" width="40">](#git)
 [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" width="40">](#html)
+[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/245px-Visual_Studio_Code_1.18_icon.svg.png" width="40">](#vsc)
 
 #### INDEX ####
 
@@ -131,6 +132,10 @@
 [__[ HTML5 ]__](#html)
 
 1. [Entities](#html_entities)
+
+[__[ Visual Studio Code ]__](#vsc)
+
+1. [Errors](#vsc_errors)
 
 ### ============================================================== ###
 
@@ -887,3 +892,18 @@ git clean -f -d
 - ```"``` => &quot
 - ``` ``` => &nbsp
 - ```'``` => &apos
+
+
+### ============================================================== ###
+
+<h1 name="vsc" style="text-aling: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/245px-Visual_Studio_Code_1.18_icon.svg.png" width="40"> Visual Studio Code</h1>
+<hr style="border: 6px solid grey; height: 2px">
+
+### <a name="vsc_errors"></a> __1. Errors__ ###
+
+Cuando no puede indexar muchos archivos
+- add the following line to either */etc/sysct1.conf* file or a new *\*.conf* file under */etc/sysctl.d/* directory:
+```fs.inotify.max_user_watches=524288```
+- Then run this command to apply the change:
+```sudo sysctl -p --system```
+- And don't forget to restart your IDE
