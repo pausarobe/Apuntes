@@ -141,6 +141,7 @@
 
 <h1 name="angular"><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="50">ANGULAR</h1>
 
+Angular: [angular.io](https://angular.io/)
 Alligator: [alligator.io](https://alligator.io/angular/)
 
 <hr style="border: 6px solid grey; height: 2px">
@@ -271,6 +272,8 @@ if (this.birthDate.value instanceof Object && this.birthDate.value.hasOwnPropert
 <hr style="border: 2px solid grey">
 
 #### <a name="angular_i18n_ngtranslate"></a> __3.1. ngTranslate__ ####
+
+ngxTranslate [ngx-translate](https://github.com/ngx-translate/core)
 
 ##### __3.1.1. con variables__ #####
 
@@ -604,6 +607,10 @@ Error de **CORS** y la extensión del navegador no es suficiente
 ### ============================================================== ###
 
 <h1 name="eui" style="text-aling: center;"><img src="https://eui.ecdevops.eu/assets/images/landing-page/eui-logo.svg" width="40"> eUI</h1>
+
+eUI: [eUI Platform](https://eui.ecdevops.eu/screen/app/home)
+eUI Styles: [Style Guide](https://eui.ecdevops.eu/screen/app/app-style-guide)
+
 <hr style="border: 6px solid grey; height: 2px">
 
 ### <a name="eui_forms"></a> __1. Forms__ ###
