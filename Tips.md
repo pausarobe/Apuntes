@@ -686,6 +686,8 @@ window.scrollTo(num1, num2);
 <h1 name="rxjs" style="text-aling: center;"><img src="https://cdn-images-1.medium.com/max/1200/1*sXrpvkWUPm1K9zGKhI3MlA.png" width="40"> RxJS</h1>
 <hr style="border: 6px solid grey; height: 2px">
 
+[learnrxjs](https://www.learnrxjs.io/)
+
 ### <a name="rxjs_examples"></a> __1. Examples__ ###
 
 <hr style="border: 2px solid grey">
