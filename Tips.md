@@ -767,6 +767,9 @@ tar -czvf <nombre>.tar.gz <carpeta>/
 ### ============================================================== ###
 
 <h1 name="git" style="text-aling: center;"><img src="https://miro.medium.com/max/480/1*zzvdRmHGGXONZpuQ2FeqsQ.png" width="40"> Git</h1>
+
+Guia sencilla: [rogerdudler](http://rogerdudler.github.io/git-guide/index.es.html)
+
 <hr style="border: 6px solid grey; height: 2px">
 
 ### <a name="git_general"></a> __1. General__ ###
