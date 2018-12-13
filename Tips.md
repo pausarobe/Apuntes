@@ -791,6 +791,26 @@ Que se ha modificado y aun no se ha subido al Stage
 git diff
 ```
 
+Interfaz grafica por defecto
+```
+gitk
+```
+
+Colores especiales para la consola
+```
+git config color.ui true
+```
+
+Mostrar solo una linea por cada commit en la traza
+```
+git config format.pretty oneline
+```
+
+Agregar archivos de forma interactiva
+```
+git add -i
+```
+
 <br>
 <hr style="border: 2px solid grey">
 
