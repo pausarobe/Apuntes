@@ -142,6 +142,7 @@
 <h1 name="angular"><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="50">ANGULAR</h1>
 
 Angular: [angular.io](https://angular.io/)
+
 Alligator: [alligator.io](https://alligator.io/angular/)
 
 <hr style="border: 6px solid grey; height: 2px">
@@ -273,7 +274,7 @@ if (this.birthDate.value instanceof Object && this.birthDate.value.hasOwnPropert
 
 #### <a name="angular_i18n_ngtranslate"></a> __3.1. ngTranslate__ ####
 
-ngxTranslate [ngx-translate](https://github.com/ngx-translate/core)
+ngxTranslate: [ngx-translate](https://github.com/ngx-translate/core)
 
 ##### __3.1.1. con variables__ #####
 
