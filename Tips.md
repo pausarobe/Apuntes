@@ -575,7 +575,7 @@ Error: **ngDevMode**
 
 Error de **CORS** y la extensión del navegador no es suficiente
 
-    En *environment.ts*
+- En *environment.ts*
     ```Typescript
     export const environment = {
         production: false,
@@ -585,7 +585,7 @@ Error de **CORS** y la extensión del navegador no es suficiente
     };
     ```
 
-    En *proxy.conf.json*
+- En *proxy.conf.json*
     ```Typescript
     {
         "/api": {
@@ -596,7 +596,7 @@ Error de **CORS** y la extensión del navegador no es suficiente
     }
     ```
 
-    Luego ejecutar ```npm run start-proxy```
+- Luego ejecutar ```npm run start-proxy```
 
 ### ============================================================== ###
 
