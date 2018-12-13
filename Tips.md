@@ -610,6 +610,7 @@ Error de **CORS** y la extensión del navegador no es suficiente
 <h1 name="eui" style="text-aling: center;"><img src="https://eui.ecdevops.eu/assets/images/landing-page/eui-logo.svg" width="40"> eUI</h1>
 
 eUI: [eUI Platform](https://eui.ecdevops.eu/screen/app/home)
+
 eUI Styles: [Style Guide](https://eui.ecdevops.eu/screen/app/app-style-guide)
 
 <hr style="border: 6px solid grey; height: 2px">
