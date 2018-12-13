@@ -573,6 +573,31 @@ Error: **ngDevMode**
 - Borrar node-modules y package.lock.json
 - ```npm install```
 
+Error de **CORS** y la extensión del navegador no es suficiente
+
+    En *environment.ts*
+    ```Typescript
+    export const environment = {
+        production: false,
+        // apiBaseUrl: 'https://webgate.acceptance.ec.europa.eu/citizens-initiative-acc2/api',
+        apiBaseUrl: '/api',
+        apiMockUrl: '/api'
+    };
+    ```
+
+    En *proxy.conf.json*
+    ```Typescript
+    {
+        "/api": {
+            "target": "https://webgate.acceptance.ec.europa.eu/citizens-initiative-acc2/api",
+            "secure": false,
+            "changeOrigin": true
+        }
+    }
+    ```
+
+    Luego ejecutar ```npm run start-proxy```
+
 ### ============================================================== ###
 
 <h1 name="eui" style="text-aling: center;"><img src="https://eui.ecdevops.eu/assets/images/landing-page/eui-logo.svg" width="40"> eUI</h1>
