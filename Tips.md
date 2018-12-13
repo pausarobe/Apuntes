@@ -140,6 +140,9 @@
 ### ============================================================== ###
 
 <h1 name="angular"><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="50">ANGULAR</h1>
+
+Alligator: [alligator.io](https://alligator.io/angular/)
+
 <hr style="border: 6px solid grey; height: 2px">
 
 ### <a name="angular_general"></a> __1. General__ ###
