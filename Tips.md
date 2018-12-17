@@ -276,7 +276,7 @@ if (this.birthDate.value instanceof Object && this.birthDate.value.hasOwnPropert
 
 ngxTranslate: [ngx-translate](https://github.com/ngx-translate/core)
 
-##### __3.1.1. con variables__ #####
+##### __3.1.1. con variables en HTML__ #####
 
 ```html
 <div *ngFor="let top of topCountries"> {{ 'etiqueta' | translate: {
@@ -300,6 +300,17 @@ Y en el JSON correspondiente (en.json, es.json...)
 constructor (private translate: TranslateService) {}
 
 this.translate.instant(etiqueta)
+```
+
+##### __3.1.3. con variables en TS__ #####
+
+```Typescript
+this.translate.instant(etiqueta, {id: countryId});
+```
+
+Y en el JSON correspondiente (en.json, es.json...)
+```json
+"etiqueta": "La id del pais es: {{id}}"
 ```
 
 <br>
