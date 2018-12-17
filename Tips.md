@@ -27,6 +27,8 @@
         
     1.7 [Callback](#angular_general_callback)
     
+    1.8 [Filter pipe](#angular_general_filterpipe)
+    
 2. [Dates](#angular_dates)
     
     2.1 [Date pipe](#angular_dates_pipe)
@@ -233,6 +235,50 @@ onDelete(index) {
   this.confirmAction.confirm(this.deleteWarning, callback);
 }
 ```
+
+#### <a name="angular_general_filterpipe"></a> __1.8. Filter pipe__ ####
+
+```Typescript
+@Pipe({
+    name: 'filter',
+    pure: false
+})
+export class FilterPipe implements PipeTransform {
+    transform(value: any, filterString: string, propName: string): any {
+        if (value.length === 0 || filterString) {
+            return value;
+        }
+        const resultArray = [];
+        for (const item of value) {
+            if (item[propName] === filterString) {
+                resultArray.push(item);
+            }
+        }
+        return resultArray
+    }
+}
+```
+En el TS tenemos:
+```Typescript
+servers = [
+    {
+        instanceType: 'large',
+        name: 'User Database',
+        status: 'stable',
+        started: new Date(15, 1, 2018)
+    },
+    ...
+]
+```
+
+En el HTML:
+```html
+<input type="text" [(ngModel)]="filteredStatus">
+<ul>
+    <li *ngFor="let server of servers | filter:filteredStatus:'status'">
+</ul>
+```
+> El ```pure: false``` sirve para que el pipe se entere de los cambios
 
 <br>
 <hr style="border: 2px solid grey">
