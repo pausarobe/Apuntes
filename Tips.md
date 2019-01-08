@@ -668,6 +668,8 @@ Error de **CORS** y la extensión del navegador no es suficiente
 
 eUI: [eUI Platform](https://eui.ecdevops.eu/screen/app/home)
 
+eUI Start: [Start Guide](https://eui.ecdevops.eu/docs/dev/docs/getting-started-generate-app.html) (Use Yarn: No)
+
 eUI Styles: [Style Guide](https://eui.ecdevops.eu/screen/app/app-style-guide)
 
 <hr style="border: 6px solid grey; height: 2px">
