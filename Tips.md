@@ -91,7 +91,9 @@
 
     3.1 [Trim](#js_others_trim)
     
-    3.2 [scroll top](#js_others_scroll)
+    3.2 [Scroll top](#js_others_scroll)
+    
+    3.3 [Spread attributes](#js_others_spread)
 
 [__[ RxJS ]__](#rxjs)
 
@@ -751,6 +753,22 @@ num2 = numero posicion Y
 ```Javascript
 window.scrollTo(num1, num2);
 ```
+
+#### <a name="js_others_spread"></a> __3.2. Spread attributes__ ####
+
+```Javascript
+let SumElements = (...arr) => {
+    let sum = 0;
+    for (let element of arr) {
+        sum += element;
+    }
+    console.log(sum); // 220
+}
+
+Sumelements(10, 20, 40, 60, 90);
+```
+> Note we are not passing array here. Instead we are passing the elements as arguments.
+
 
 ### ============================================================== ###
 
