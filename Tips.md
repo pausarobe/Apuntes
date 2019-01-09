@@ -765,7 +765,7 @@ let SumElements = (...arr) => {
     console.log(sum); // 220
 }
 
-Sumelements(10, 20, 40, 60, 90);
+SumElements(10, 20, 40, 60, 90);
 ```
 > Note we are not passing array here. Instead we are passing the elements as arguments.
 
