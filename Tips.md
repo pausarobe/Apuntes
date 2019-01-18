@@ -67,6 +67,8 @@
     
     6.4 [Image preview](#angular_form_imgpreview)
     
+    6.5 [Dynamically alter Form Validation](#angular_form_dynamic)
+    
 7. [Errors](#angular_errors)
 
 [__[ eUI ]__](#eui)
@@ -620,6 +622,68 @@ Antes de poner el *ng-valid* o *ng-invalid* angular pone un *ng-pending*
 
 <img [src]="imagePath.value" class="img-responsive">
 ```
+
+#### <a name="angular_form_dynamic"></a> __6.5. Dynamically alter Form Validation__ ####
+
+[fuente](https://netbasal.com/three-ways-to-dynamically-alter-your-form-validation-in-angular-e5fd15f1e946)
+
+Queremos añadir un campo + validación si se elige la optionB
+
+__Dynamically Add a Control__
+```Typescript
+ngOnInit() {
+    this.form = new FormGroup({
+        optionA: new FormControl(false),
+        optionB: new FormControl(false)
+    });
+    
+    this.optionB.valueChanges.subscribe(checked => {
+        if (checked) {
+            const validators = [ Validators.required, Validators.minLength(5) ];
+            this.form.addControl('optionBExtra', new FormControl('', validators));
+        } else {
+            this.form.removeControl('optionBExtra');
+        }
+        this.form.updateValueAndValidity();
+    });
+}
+ ```
+
+__Dynamically Add Validators__
+```Typescript
+ngOnInit() {
+    this.form = new FormGroup({
+        optionA: new FormControl(false),
+        optionB: new FormControl(false),
+        optionBExtra: new FormControl('')
+    });
+    
+    this.optionB.valueChanges.subscribe(checked => {
+        if (checked) {
+            this.optionBExtra.setValidators([Validators.required, Validators.minLength(5)]);
+        } else {
+            this.optionBExtra.setValidators(null);
+        }
+        this.form.updateValueAndValidity();
+    });
+}
+ ```
+
+__Disable the Control__
+```Typescript
+ngOnInit() {
+    this.form = new FormGroup({
+        optionA: new FormControl(false),
+        optionB: new FormControl(false),
+        optionBExtra: new FormControl({ disabled: true, value: '' }, [Validators.required, Validators.minLength(5))
+    });
+    
+    this.optionB.valueChanges.subscribe(checked => {
+        checked ? this.optionBExtra.enable() : this.optionBExtra.disable()
+    });
+}
+ ```
+ 
 
 <br>
 <hr style="border: 2px solid grey">
