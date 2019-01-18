@@ -106,6 +106,8 @@
     1.2 [Zip & SwitchMap](#rxjs_examples_zipshitchmap)
     
     1.3 [Concat](#rxjs_examples_concat)
+    
+    1.4 [Merge](#rxjs_examples_merge)
 
 [__[ Console ]__](#console)
 
@@ -877,6 +879,11 @@ const twitter$ = this.api.updateTwitter();
 
 Observable.concat(custom$, twitter$).subscribe(data => console.log(data))
 ```
+
+#### <a name="rxjs_examples_merge"></a> __1.4 Merge__ ####
+
+Combine two streams
+[<img src="https://cdn-images-1.medium.com/max/800/1*VAHTR8hAmOpum8IFrdzZlA.gif">]
 
 ### ============================================================== ###
 
