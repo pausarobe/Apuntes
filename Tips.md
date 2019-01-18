@@ -883,7 +883,15 @@ Observable.concat(custom$, twitter$).subscribe(data => console.log(data))
 #### <a name="rxjs_examples_merge"></a> __1.4 Merge__ ####
 
 Combine two streams
-[<img src="https://cdn-images-1.medium.com/max/800/1*VAHTR8hAmOpum8IFrdzZlA.gif">]
+```Typescript
+const logo$ = this.manageOcsService.updateOcsLogo(this.uploadLogo[0].file);
+const customisation$ = this.manageOcsService.updateCustomisations(newCustom);
+const save$ = logo$.merge(customisation$);
+
+save$.subscribe(data => console.log(data));
+```
+
+<img src="https://cdn-images-1.medium.com/max/800/1*VAHTR8hAmOpum8IFrdzZlA.gif">
 
 ### ============================================================== ###
 
