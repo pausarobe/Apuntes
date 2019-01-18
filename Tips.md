@@ -841,6 +841,7 @@ SumElements(10, 20, 40, 60, 90);
 <h1 name="rxjs" style="text-aling: center;"><img src="https://cdn-images-1.medium.com/max/1200/1*sXrpvkWUPm1K9zGKhI3MlA.png" width="40"> RxJS</h1>
 
 Learn RxJS: [learnrxjs.io](https://www.learnrxjs.io/)
+[Fuente Gifs](https://blog.angularindepth.com/learn-to-combine-rxjs-sequences-with-super-intuitive-interactive-diagrams-20fce8e6511)
 
 <hr style="border: 6px solid grey; height: 2px">
 
@@ -860,6 +861,8 @@ Observable.zip(
 })
 ```
 
+<img src="https://cdn-images-1.medium.com/max/800/1*Cu-uSXNacbLlpWjm35C3_Q.gif">
+
 #### <a name="rxjs_examples_zipswitchmap"></a> __1.2. Zip & SwitchMap__ ####
 
 Encapsula las dos funciones iguales y las ejecuta para luego ejecutar el .switchMap()
@@ -872,13 +875,15 @@ Observable.zip(this.initiativeService.saveDocument(doc1), this.initiativeService
 
 #### <a name="rxjs_examples_concat"></a> __1.3. Concat__ ####
 
-Concatena las llamadas
+Concatena las llamadas, subscribiéndose primero a una y luego a la otra.
 ```Javascript
 const custom$ = this.api.updateCustom();
 const twitter$ = this.api.updateTwitter();
 
 Observable.concat(custom$, twitter$).subscribe(data => console.log(data))
 ```
+
+<img src="https://cdn-images-1.medium.com/max/800/1*I_fiTaQJG0Lm8SOyttFxHQ.gif">
 
 #### <a name="rxjs_examples_merge"></a> __1.4 Merge__ ####
 
