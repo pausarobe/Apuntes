@@ -88,14 +88,18 @@
 2. [Objects](#js_objects)
 
     2.1 [getOwnPropertyNames()](#js_objects_own)
-    
-3. [Others](#js_others)
 
-    3.1 [Trim](#js_others_trim)
+3. [Arrays](#js_arrays)
+
+    3.1 [General](#js_arrays_general)
     
-    3.2 [Scroll top](#js_others_scroll)
+4. [Others](#js_others)
+
+    4.1 [Trim](#js_others_trim)
     
-    3.3 [Spread attributes](#js_others_spread)
+    4.2 [Scroll top](#js_others_scroll)
+    
+    4.3 [Spread attributes](#js_others_spread)
 
 [__[ RxJS ]__](#rxjs)
 
@@ -800,18 +804,32 @@ Object.getOwnPropertyNames(objeto).length === 0;
 <br>
 <hr style="border: 2px solid grey">
 
-### <a name="js_others"></a> __3. Others__ ###
+### <a name="js_arrays"></a> __3. Arrays__ ###
 
 <hr style="border: 2px solid grey">
 
-#### <a name="js_others_trim"></a> __3.1. Trim__ ####
+#### <a name="js_arrays_general"></a> __3.1. General__ ####
+
+Mergear Arrays y eliminar elementos duplicados
+```Javascript
+Array.from(new Set([...this.arr1, ...this.arr2, ...this.arr3]))
+```
+
+<br>
+<hr style="border: 2px solid grey">
+
+### <a name="js_others"></a> __4. Others__ ###
+
+<hr style="border: 2px solid grey">
+
+#### <a name="js_others_trim"></a> __4.1. Trim__ ####
 
 Quita los espacios en blanco de los laterales
 ```Javascript
 telephoneNumber.value.trim()
 ```
 
-#### <a name="js_others_scroll"></a> __3.2. Scroll top__ ####
+#### <a name="js_others_scroll"></a> __4.2. Scroll top__ ####
 
 num1 = numero posicion X
 
@@ -820,7 +838,7 @@ num2 = numero posicion Y
 window.scrollTo(num1, num2);
 ```
 
-#### <a name="js_others_spread"></a> __3.2. Spread attributes__ ####
+#### <a name="js_others_spread"></a> __4.2. Spread attributes__ ####
 
 ```Javascript
 let SumElements = (...arr) => {
