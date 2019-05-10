@@ -29,6 +29,8 @@
     
     1.8 [Filter pipe](#angular_general_filterpipe)
     
+    1.9 [ngFor Observable](#angular_general_ngob)
+    
 2. [Dates](#angular_dates)
     
     2.1 [Date pipe](#angular_dates_pipe)
@@ -289,6 +291,13 @@ En el HTML:
 </ul>
 ```
 > El ```pure: false``` sirve para que el pipe se entere de los cambios
+
+#### <a name="angular_general_ngob"></a> __1.9. ngFor de un Observable__ ####
+
+```html
+*ngFor="let ingredient of (shoppingList | async).ingredients"
+```
+
 
 <br>
 <hr style="border: 2px solid grey">
