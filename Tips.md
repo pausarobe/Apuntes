@@ -90,6 +90,8 @@
 2. [Objects](#js_objects)
 
     2.1 [getOwnPropertyNames()](#js_objects_own)
+    
+    2.2 [assign](#js_objects_assign)
 
 3. [Arrays](#js_arrays)
 
@@ -813,6 +815,15 @@ Para comprobar si un Object esta vacio
 ```Javascript
 Object.getOwnPropertyNames(objeto).length === 0;
 ```
+
+#### <a name="js_objects_assing"></a> __2.2. assign__ ####
+
+Convertir un Array de Objects a un solo Object
+```Javascript
+const obj = {};
+arr.forEach(item => Object.assign(obj, item));
+```
+Junta cada Object del Array (item) al Object "obj".
 
 <br>
 <hr style="border: 2px solid grey">
