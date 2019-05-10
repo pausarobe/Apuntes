@@ -151,6 +151,10 @@
 
 1. [Errors](#vsc_errors)
 
+2. [Others](#vsc_others)
+
+    2.1 [tslint](#vsc_others_tslint)
+
 ### ============================================================== ###
 
 <h1 name="angular"><img src="https://cdn-images-1.medium.com/max/480/1*nbJ41jD1-r2Oe6FsLjKaOg.png" width="50">ANGULAR</h1>
@@ -1160,3 +1164,17 @@ Cuando no puede indexar muchos archivos
 - Then run this command to apply the change:
 ```sudo sysctl -p --system```
 - And don't forget to restart your IDE
+
+<br>
+<hr style="border: 2px solid grey">
+
+### <a name="vsc_others"></a> __2. Others__ ###
+
+<hr style="border: 2px solid grey">
+
+#### <a name="vsc_others_tslint"></a> __2.1. tslint__ ####
+
+Poner justo arriba de la línea que supera el límite
+```typescript
+// tslint:disable-next-line:max-line-length
+```
