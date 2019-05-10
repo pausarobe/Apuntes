@@ -92,6 +92,8 @@
     2.1 [getOwnPropertyNames()](#js_objects_own)
     
     2.2 [assign](#js_objects_assign)
+    
+    2.3 [isObject](#js_objects_is)
 
 3. [Arrays](#js_arrays)
 
@@ -824,6 +826,15 @@ const obj = {};
 arr.forEach(item => Object.assign(obj, item));
 ```
 Junta cada Object del Array (item) al Object "obj".
+
+#### <a name="js_objects_is"></a> __2.2. isObject__ ####
+
+Para comprobar si es un Object
+```Typescript
+isObject(value: any) {
+    return value && typeof value === 'object' && value.constructor === Object;
+}
+```
 
 <br>
 <hr style="border: 2px solid grey">
