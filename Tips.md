@@ -1225,6 +1225,11 @@ Cambiar de rama
 svn switch <URL>
 ```
 
+Borrar una rama
+```
+svn delete <URL> -m "Delete branch"
+```
+
 Traerse la información de un svn existente (checkout)
 ```
 svn co <URL>
