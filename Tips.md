@@ -1205,3 +1205,10 @@ Poner justo arriba de la línea que supera el límite
 ```typescript
 // tslint:disable-next-line:max-line-length
 ```
+
+### ============================================================== ###
+
+<h1 name="svn" style="text-aling: center;"><img src="https://svn.apache.org/repos/asf/subversion/trunk/notes/logo/subversion_logo.svg" width="40"> Subversion</h1>
+<hr style="border: 6px solid grey; height: 2px">
+
+### <a name="svn_general"></a> __1. General__ ###
