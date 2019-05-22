@@ -1212,3 +1212,25 @@ Poner justo arriba de la línea que supera el límite
 <hr style="border: 6px solid grey; height: 2px">
 
 ### <a name="svn_general"></a> __1. General__ ###
+
+<hr style="border: 6px solid grey; height: 2px">
+
+Crear una rama a partir de otra
+```
+svn copy <URL_existente> <URL_nueva> -m "Create new branch"
+```
+
+Cambiar de rama
+```
+svn switch <URL>
+```
+
+Traerse la información de un svn existente (checkout)
+```
+svn co <URL>
+```
+
+Mergear dos ramas
+```
+
+```
