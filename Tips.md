@@ -1230,7 +1230,10 @@ Traerse la información de un svn existente (checkout)
 svn co <URL>
 ```
 
-Mergear dos ramas
-```
-
-```
+Mergear dos ramas: Traer cambios de <branch_2> a <branch_1>
+- <branch_1> -> click derecho -> Merge
+- Merge a range of revisions
+- Select <branch_2> and select "all revisions"
+- Test merge
+- Merge
+- SVN Commit
