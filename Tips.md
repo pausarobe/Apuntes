@@ -6,7 +6,7 @@
 [<img src="https://miro.medium.com/max/480/1*zzvdRmHGGXONZpuQ2FeqsQ.png" width="40">](#git)
 [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" width="40">](#html)
 [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/245px-Visual_Studio_Code_1.18_icon.svg.png" width="40">](#vsc)
-[<img src="https://cdn.worldvectorlogo.com/logos/subversion.svg" width="40">](#svn)
+[<img src="https://svn.apache.org/repos/asf/subversion/trunk/notes/logo/256-colour/subversion_logo-384x332.png" width="40">](#svn)
 
 #### INDEX ####
 
